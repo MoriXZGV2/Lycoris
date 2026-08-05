@@ -16,6 +16,12 @@
     width: 100%;
     text-align: center;
 
+    @media screen and (max-width: 640px) {
+        min-height: auto;
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
     .logo-title {
         display: flex;
         flex-direction: column;
@@ -235,6 +241,11 @@
         font-weight: bold;
         font-size: 1em;
 
+        @media screen and (max-width: 640px) {
+            padding: 0.3em 0.8em;
+            font-size: 0.9em;
+        }
+
         .t-title {
             color: light-dark(#3c3836, #fff);
             font-weight: bold;
@@ -245,6 +256,11 @@
         padding: 1em 1.3em;
         color: var(--z-text);
         line-height: 1.6;
+
+        @media screen and (max-width: 640px) {
+            padding: 0.7em 0.9em;
+            line-height: 1.45;
+        }
 
         .t-line {
             margin: 0 0 0.6em;
