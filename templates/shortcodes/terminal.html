@@ -17,9 +17,9 @@
   var promptPath = term.querySelector('.term-prompt .tp-path');
 
   var files = {
-    '~/Stress.md': 'Jujur, hari ini aku capek banget. Asli, rasanya udah lah — kayak gitu terus. Obatku cuma musikku, sama menulis blog.',
-    '~/Blog/motto.md': 'Amor fati — cintai apa yang terjadi, termasuk hari ini.',
-    '~/Musik/relaksasi.mp3': 'relaksasi.mp3 — 3:33 — mainkan saat dunia terasa bising.'
+    '~/Stress.md': 'Jujur, hari ini aku capek banget. Asli, rasanya udah lah, kayak gitu terus. Obatku cuma musikku, sama menulis blog.',
+    '~/Blog/motto.md': 'Amor fati. Cintai apa yang terjadi, termasuk hari ini.',
+    '~/Musik/relaksasi.mp3': 'relaksasi.mp3 | 3:33 | mainkan saat dunia terasa bising.'
   };
   var dirs = {
     '~': ['Blog', 'Musik', 'Stress.md'],
@@ -121,7 +121,7 @@
       promptPath.textContent = cwd;
     },
     cat: function (args) {
-      if (!args.length) { printOut('cat: missing operand — ketik cat <nama file>'); return; }
+      if (!args.length) { printOut('cat: missing operand. Ketik cat <nama file>'); return; }
       var t = normalize(args[0]);
       if (files[t] !== undefined) { printOut(files[t]); }
       else if (dirs[t]) { printOut('cat: ' + args[0] + ': Is a directory'); }
