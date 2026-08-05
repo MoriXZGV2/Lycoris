@@ -195,8 +195,8 @@
         border-radius: 0;
         overflow: hidden;
         border: 2px solid var(--border-color);
-        background-color: #0f1011;
-        box-shadow: -8px -8px 8px rgba(0, 0, 0, 0.7);
+        background-color: light-dark(#f2e5bc, #0f1011);
+        box-shadow: -8px -8px 8px light-dark(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.7));
         text-align: left;
         font-family: var(--font-mono) !important;
         animation: fadeInDown 0.8s ease-out 0.2s backwards;
@@ -204,15 +204,15 @@
 
     .terminal-bar {
         padding: 0.45em 1em;
-        background-color: #000;
+        background-color: light-dark(#fbf1c7, #000);
         border-bottom: 2px solid var(--border-color);
         text-align: center;
-        color: #fff;
+        color: light-dark(#3c3836, #fff);
         font-weight: bold;
         font-size: 1em;
 
         .t-title {
-            color: #fff;
+            color: light-dark(#3c3836, #fff);
             font-weight: bold;
         }
     }
@@ -286,6 +286,7 @@
     margin-right: 0 !important;
     margin-top: 0 !important;
     padding-left: 0 !important;
+    padding-right: 0 !important;
     min-height: calc(100vh - 100px) !important;
     display: flex;
     flex-direction: column;
