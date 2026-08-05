@@ -188,18 +188,33 @@
         min-height: 1.4em;
     }
 
-    /* Terminal card */
+    /* Terminal card (brutalist, matches berry WM) */
     .terminal-card {
         width: min(560px, 92vw);
         margin: 0 auto;
-        border-radius: 8px;
+        border-radius: 0;
         overflow: hidden;
-        border: 1px solid var(--border-color);
+        border: 2px solid var(--border-color);
         background-color: #0f1011;
-        box-shadow: var(--pre-shadow);
+        box-shadow: -8px -8px 8px rgba(0, 0, 0, 0.7);
         text-align: left;
         font-family: var(--font-mono) !important;
         animation: fadeInDown 0.8s ease-out 0.2s backwards;
+    }
+
+    .terminal-bar {
+        padding: 0.45em 1em;
+        background-color: #000;
+        border-bottom: 2px solid var(--border-color);
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1em;
+
+        .t-title {
+            color: #fff;
+            font-weight: bold;
+        }
     }
 
     .terminal-body {
@@ -208,8 +223,12 @@
         line-height: 1.6;
 
         .t-line {
-            margin: 0;
+            margin: 0 0 0.6em;
             overflow-wrap: break-word;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
         .t-out {
