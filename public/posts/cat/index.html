@@ -189,6 +189,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div class="term-window" role="group" aria-label="interactive terminal">
   <div class="term-bar">Mori@LycorisRadiata: ~</div>
   <div class="term-screen"></div>
@@ -221,9 +231,7 @@
 <p class="term-hint">Type <code>help</code>, then press <kbd>Enter</kbd>.</p>
 <script>
 var HOST = "LycorisRadiata";
-var FILE = "Stress.md";
 var TRACK = "relaksasi.ogg";
-var TEXT = "Jujur, hari ini aku capek banget. Asli, rasanya udah lah, kayak gitu terus. Obatku cuma musikku, sama menulis blog.";
 var DUR = "4:54";
 var DURS = "294.5";
 var TRACKDESC = "play this when the world gets too loud.";
@@ -236,12 +244,16 @@ var TRACKDESC = "play this when the world gets too loud.";
   var promptPath = term.querySelector('.term-prompt .tp-path');
 
   var files = {
-    ['~/' + FILE]: TEXT,
+"~/Stress.md": "Jujur, hari ini aku capek banget. Asli, rasanya udah lah, kayak gitu terus. Obatku cuma musikku, sama menulis blog.",
     '~/Blog/motto.md': 'Amor fati. Love whatever happens, including today.',
     ['~/Musik/' + TRACK]: TRACK + ' | ' + DUR + ' | ' + TRACKDESC
   };
+  var protectedFiles = {
+"~/Stress.md": true,
+    '~/Blog/motto.md': true
+  };
   var dirs = {
-    '~': ['Blog', 'Musik', FILE],
+    '~': ['Blog', 'Musik', "Stress.md"],
     '~/Blog': ['motto.md'],
     '~/Musik': [TRACK]
   };
@@ -362,10 +374,10 @@ var TRACKDESC = "play this when the world gets too loud.";
     rm: function (args) {
       if (!args.length) { printOut('rm: missing operand'); return; }
       var name = args[0];
-      var t = cwd + '/' + name;
-      if (name === FILE || t === '~/' + FILE) {
+      var t = normalize(args[0]);
+      if (protectedFiles[t]) {
         printOut('rm: cannot remove ' + name + ': Permission denied', 'dim');
-        printOut('   ' + FILE + ' is a protected system file. Sorry.');
+        printOut('   ' + name + ' is a protected file. Sorry.');
         return;
       }
       var idx = dirs[cwd].indexOf(name);
@@ -440,10 +452,8 @@ var TRACKDESC = "play this when the world gets too loud.";
     { out: '[ ok ] Starting blogd' },
     { out: '' },
     { cmd: 'whoami', out: 'Mori' },
-    { cmd: 'touch ' + FILE, out: null },
-    { cmd: 'ls', out: 'Blog/   Musik/   ' + FILE },
-    { cmd: 'cat > ' + FILE + ' <<EOF', out: TEXT },
-    { out: 'EOF', dim: true }
+    { cmd: 'ls', out: 'Blog/   Musik/   ' + "Stress.md" },
+{ cmd: 'cat Stress.md', out: "Jujur, hari ini aku capek banget. Asli, rasanya udah lah, kayak gitu terus. Obatku cuma musikku, sama menulis blog." },
   ];
 
   function runBoot() {

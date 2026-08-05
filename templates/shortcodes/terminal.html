@@ -1,9 +1,32 @@
 {% set file = file | default(value="Stress.md") %}
+{% set text = text | default(value="") %}
 {% set track = track | default(value="relaksasi.ogg") %}
 {% set host = host | default(value="LycorisRadiata") %}
 {% set dur = dur | default(value="4:54") %}
 {% set durS = durS | default(value="294.5") %}
 {% set trackDesc = trackDesc | default(value="press play.") %}
+{% if body %}
+{% set blocks = body | split(pat="--- ") %}
+{% else %}
+{% set blocks = [file] %}
+{% endif %}
+{% set fnames = [] %}
+{% set ftexts = [] %}
+{% if body %}
+{% for block in blocks %}
+{% set trimmed = block | trim %}
+{% if trimmed != "" %}
+{% set lines = trimmed | split(pat="\n") %}
+{% set fname = lines[0] | trim %}
+{% set ftext = lines | slice(start=1) | join(sep="\n") | trim %}
+{% set_global fnames = fnames | concat(with=[fname]) %}
+{% set_global ftexts = ftexts | concat(with=[ftext]) %}
+{% endif %}
+{% endfor %}
+{% else %}
+{% set_global fnames = fnames | concat(with=[file]) %}
+{% set_global ftexts = ftexts | concat(with=[text]) %}
+{% endif %}
 <div class="term-window" role="group" aria-label="interactive terminal">
   <div class="term-bar">Mori@{{ host }}: ~</div>
   <div class="term-screen"></div>
@@ -36,9 +59,7 @@
 <p class="term-hint">Type <code>help</code>, then press <kbd>Enter</kbd>.</p>
 <script>
 var HOST = {{ host | json_encode | safe }};
-var FILE = {{ file | json_encode | safe }};
 var TRACK = {{ track | json_encode | safe }};
-var TEXT = {{ text | json_encode | safe }};
 var DUR = {{ dur | json_encode | safe }};
 var DURS = {{ durS | json_encode | safe }};
 var TRACKDESC = {{ trackDesc | json_encode | safe }};
@@ -51,12 +72,23 @@ var TRACKDESC = {{ trackDesc | json_encode | safe }};
   var promptPath = term.querySelector('.term-prompt .tp-path');
 
   var files = {
-    ['~/' + FILE]: TEXT,
+{% for fname in fnames -%}
+{%- set ftext = ftexts[loop.index0] -%}
+{%- set fpath = '~/' ~ fname -%}
+    {{ fpath | json_encode | safe }}: {{ ftext | json_encode | safe }},
+{%- endfor %}
     '~/Blog/motto.md': 'Amor fati. Love whatever happens, including today.',
     ['~/Musik/' + TRACK]: TRACK + ' | ' + DUR + ' | ' + TRACKDESC
   };
+  var protectedFiles = {
+{% for fname in fnames -%}
+{%- set fpath = '~/' ~ fname -%}
+    {{ fpath | json_encode | safe }}: true,
+{%- endfor %}
+    '~/Blog/motto.md': true
+  };
   var dirs = {
-    '~': ['Blog', 'Musik', FILE],
+    '~': ['Blog', 'Musik'{% for fname in fnames %}, {{ fname | json_encode | safe }}{% endfor %}],
     '~/Blog': ['motto.md'],
     '~/Musik': [TRACK]
   };
@@ -177,10 +209,10 @@ var TRACKDESC = {{ trackDesc | json_encode | safe }};
     rm: function (args) {
       if (!args.length) { printOut('rm: missing operand'); return; }
       var name = args[0];
-      var t = cwd + '/' + name;
-      if (name === FILE || t === '~/' + FILE) {
+      var t = normalize(args[0]);
+      if (protectedFiles[t]) {
         printOut('rm: cannot remove ' + name + ': Permission denied', 'dim');
-        printOut('   ' + FILE + ' is a protected system file. Sorry.');
+        printOut('   ' + name + ' is a protected file. Sorry.');
         return;
       }
       var idx = dirs[cwd].indexOf(name);
@@ -255,10 +287,11 @@ var TRACKDESC = {{ trackDesc | json_encode | safe }};
     { out: '[ ok ] Starting blogd' },
     { out: '' },
     { cmd: 'whoami', out: 'Mori' },
-    { cmd: 'touch ' + FILE, out: null },
-    { cmd: 'ls', out: 'Blog/   Musik/   ' + FILE },
-    { cmd: 'cat > ' + FILE + ' <<EOF', out: TEXT },
-    { out: 'EOF', dim: true }
+    { cmd: 'ls', out: 'Blog/   Musik/   ' + {{ fnames | join(sep="   ") | json_encode | safe }} },
+{% for fname in fnames -%}
+{%- set ftext = ftexts[loop.index0] -%}
+    { cmd: 'cat {{ fname }}', out: {{ ftext | json_encode | safe }} },
+{%- endfor %}
   ];
 
   function runBoot() {
