@@ -217,4 +217,29 @@
         display: grid;
         row-gap: 1.5em;
     }
+
+    .article-block {
+        text-align: center;
+
+        &::after {
+            display: none;
+        }
+
+        .title-link .heading {
+            padding-left: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        .article-summary {
+            padding-left: 0;
+            border-left: none;
+        }
+
+        .meta-line {
+            text-align: center;
+        }
+    }
 }

@@ -24,10 +24,10 @@
     /* Colors */
     --text-color: light-dark(hsla(0, 0%, 20%, 1.0), hsla(0, 0%, 85%, 1.0));
     --text-color-light: light-dark(hsla(0, 0%, 40%, 1.0), hsla(0, 0%, 65%, 1.0));
-    --bg-color: light-dark(white, hsla(0, 0%, 8%, 1.0));
-    --sidebar-bg: light-dark(hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 8%, 0.9));
+    --bg-color: light-dark(white, black);
+    --sidebar-bg: light-dark(hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 0%, 0.9));
     --border-color: light-dark(hsla(0, 0%, 70%, 1.0), hsla(0, 0%, 25%, 1.0));
-    --code-bg: light-dark(hsla(0, 0%, 96%, 1.0), hsla(0, 0%, 12%, 1.0));
+    --code-bg: light-dark(hsla(0, 0%, 96%, 1.0), hsla(0, 0%, 6%, 1.0));
     --btn-bg: light-dark(hsla(0, 0%, 60%, 1.0), hsla(0, 0%, 35%, 1.0));
     --btn-hover: light-dark(hsla(0, 0%, 50%, 1.0), hsla(0, 0%, 45%, 1.0));
     --shadow-color: light-dark(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
