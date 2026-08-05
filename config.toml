@@ -37,12 +37,12 @@ home_recent_posts = 3
 motto_mode = "multi"
 
 mottos = [
-    "Cogito ergo sum",
-    "Memento mori, memento vivere",
-    "Labor omnia vincit",
-    "Amor fati",
-    "Sic itur ad astra",
-    "Audentes fortuna iuvat",
+    "Dubito, ergo cogito, ergo sum.",
+    "Memento mori, memento vivere.",
+    "Labor omnia vincit improbus.",
+    "Amor fati.",
+    "Sic itur ad astra.",
+    "Audentes fortuna iuvat.",
 ]
 
 social_links = [
