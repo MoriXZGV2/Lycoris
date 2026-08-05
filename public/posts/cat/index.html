@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Posts | Myosotis</title>
+  <title>[mori@LycorisRadiata ~]$ cat | Myosotis</title>
 
   
   
@@ -40,20 +40,30 @@
 
   
 <!-- Primary Meta Tags -->
+  
 <meta
   name="description"
-  content="Posts | Myosotis"
+  content="
+  Mori@LycorisRadiata: ~
+  
+  
+    [Mori@LycorisRadiata ~]$
+    
+  
+
+Ketik help, lalu tekan Enter.
+…"
 />
 
 <!-- Open Graph / Facebook -->
-<meta
-  property="og:title"
-  content="Posts | Myosotis"
-/>
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.morixhikari.my.id/posts/" />
+<meta property="og:title" content="[mori@LycorisRadiata ~]$ cat | Myosotis" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.morixhikari.my.id/posts/cat/" />
 
-<!-- Twitter -->
+<meta property="article:published_time" content="2026-08-05" />
+<meta property="article:modified_time" content="2026-08-05" />
+
+<meta property="article:section" content="posts" />
 
 </head>
 
@@ -149,381 +159,303 @@
     <div class="autopagerize_page_element">
       <div class="content animated fadeIn ">
         
-<main class="article-list">
-  <div class="ad"> </div>
-  <article class="article-block title-block">
-    <h2 class="heading">Posts</h2>
-    <aside class="page">
-      Page 1 / 3
-    </aside>
-  </article>
+<article class="content-article">
+  <main class="article-content">
+    <div class="article-intro-container">
+        <div class="intro-header">
+            <h1 class="heading">[mori@LycorisRadiata ~]$ cat</h1>
+            <div class="meta-line">
+                
+                <span class="date">Aug. 05, 2026</span>
+                
+                
+                
+                <span class="separator">/</span>
+                <span class="tags">
+                
+                <a href="https://blog.morixhikari.my.id/tags/curhatan/">#Curhatan</a>
+                
+                </span>
+                
+            </div>
+        </div>
 
-     
-<article class="article-block">  
-  
-  <div class="article-content">
-    <div class="article-header">
-        <a href="https://blog.morixhikari.my.id/posts/cat/" class="title-link">
-            <h2 class="heading">[mori@LycorisRadiata ~]$ cat</h2>
-        </a>
+        <div class="intro-body">
+            
+
+            
+        </div>
     </div>
     
-    <div class="article-summary">
-        <p class="description"></p>
-    </div>
-
-    <div class="meta-line">
-        
-        
-        
-        <span class="date">Aug. 05, 2026</span>
-        
-        
-        
-        <span class="separator">/</span>
-        <span class="tags">
-        
-        <a href="https://blog.morixhikari.my.id/tags/curhatan/">#Curhatan</a>
-        
-        </span>
-        
-    </div>
+    <div class="term-window" role="group" aria-label="terminal interaktif">
+  <div class="term-bar">Mori@LycorisRadiata: ~</div>
+  <div class="term-screen" tabindex="0"></div>
+  <div class="term-input-row">
+    <span class="term-prompt">[<span class="tp-user">Mori</span><span class="tp-at">@</span><span class="tp-host">LycorisRadiata</span> <span class="tp-path">~</span>]$</span>
+    <input type="text" class="term-input" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="perintah terminal" disabled />
   </div>
+</div>
+<p class="term-hint">Ketik <code>help</code>, lalu tekan <kbd>Enter</kbd>.</p>
+<script>
+(function () {
+  'use strict';
+  var root = document.currentScript;
+  var term = root.parentElement.querySelector('.term-window');
+  var screen = term.querySelector('.term-screen');
+  var input = term.querySelector('.term-input');
+  var promptPath = term.querySelector('.term-prompt .tp-path');
+
+  var files = {
+    '~/Stress.md': 'Jujur, hari ini aku capek banget. Asli, rasanya udah lah — kayak gitu terus. Obatku cuma musikku, sama menulis blog.',
+    '~/Blog/motto.md': 'Amor fati — cintai apa yang terjadi, termasuk hari ini.',
+    '~/Musik/relaksasi.mp3': 'relaksasi.mp3 — 3:33 — mainkan saat dunia terasa bising.'
+  };
+  var dirs = {
+    '~': ['Blog', 'Musik', 'Stress.md'],
+    '~/Blog': ['motto.md'],
+    '~/Musik': ['relaksasi.mp3']
+  };
+  var mottos = [
+    'Dubito, ergo cogito, ergo sum.',
+    'Memento mori, memento vivere.',
+    'Labor omnia vincit improbus.',
+    'Amor fati.',
+    'Sic itur ad astra.',
+    'Audentes fortuna iuvat.'
+  ];
+
+  var cwd = '~';
+  var history = [];
+  var hIdx = -1;
+  var skip = false;
+
+  function u(t) { return '<span class="tp-user">' + t + '</span>'; }
+  function a(t) { return '<span class="tp-at">' + t + '</span>'; }
+  function h(t) { return '<span class="tp-host">' + t + '</span>'; }
+  function p(t) { return '<span class="tp-path">' + t + '</span>'; }
+
+  function promptMarkup() {
+    return '[' + u('Mori') + a('@') + h('LycorisRadiata') + ' ' + p(cwd) + ']$ ';
+  }
+
+  function esc(t) {
+    return t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function scroll() { screen.scrollTop = screen.scrollHeight; }
+
+  function printOut(text, cls) {
+    if (text === null || text === undefined || text === '') { scroll(); return; }
+    var div = document.createElement('div');
+    div.className = 'term-out' + (cls ? ' ' + cls : '');
+    div.innerHTML = esc(text);
+    screen.appendChild(div);
+    scroll();
+  }
+
+  function printCmdLine(cmd) {
+    var div = document.createElement('div');
+    div.className = 'term-out';
+    div.innerHTML = promptMarkup() + esc(cmd);
+    screen.appendChild(div);
+    scroll();
+  }
+
+  function normalize(arg) {
+    var base = arg.charAt(0) === '~' ? '~' : cwd;
+    var rest = arg.charAt(0) === '~' ? arg.slice(1) : arg;
+    var segs = (base + '/' + rest).split('/');
+    var parts = [];
+    for (var i = 0; i < segs.length; i++) {
+      var s = segs[i];
+      if (!s || s === '.') { continue; }
+      if (s === '..') { parts.pop(); } else { parts.push(s); }
+    }
+    return parts.length ? parts.join('/') : '~';
+  }
+
+  var commands = {
+    help: function () {
+      printOut('Perintah yang tersedia:\n' +
+        '  whoami        siapa kamu\n' +
+        '  pwd           direktori saat ini\n' +
+        '  ls [dir]      daftar isi direktori\n' +
+        '  cd <dir>      pindah direktori\n' +
+        '  cat <file>    baca isi file\n' +
+        '  touch <file>  buat file baru\n' +
+        '  rm <file>     hapus file\n' +
+        '  echo <teks>   ulangi teks\n' +
+        '  date          tanggal hari ini\n' +
+        '  motto         kutipan hari ini\n' +
+        '  neofetch      info sistem\n' +
+        '  clear         bersihkan layar\n' +
+        '  exit          keluar terminal');
+    },
+    whoami: function () { printOut('Mori'); },
+    pwd: function () { printOut(cwd); },
+    ls: function (args) {
+      var target = args.length ? normalize(args[0]) : cwd;
+      if (files[target] !== undefined) { printOut(target.split('/').pop()); return; }
+      var list = dirs[target];
+      if (!list) { printOut('ls: cannot access ' + args[0] + ': No such file or directory'); return; }
+      printOut(list.join('   '));
+    },
+    cd: function (args) {
+      if (!args.length) { cwd = '~'; }
+      else {
+        var t = normalize(args[0]);
+        if (dirs[t]) { cwd = t; }
+        else { printOut('cd: ' + args[0] + ': No such directory'); return; }
+      }
+      promptPath.textContent = cwd;
+    },
+    cat: function (args) {
+      if (!args.length) { printOut('cat: missing operand — ketik cat <nama file>'); return; }
+      var t = normalize(args[0]);
+      if (files[t] !== undefined) { printOut(files[t]); }
+      else if (dirs[t]) { printOut('cat: ' + args[0] + ': Is a directory'); }
+      else { printOut('cat: ' + args[0] + ': No such file'); }
+    },
+    touch: function (args) {
+      if (!args.length) { printOut('touch: missing file operand'); return; }
+      var name = args[0];
+      var t = cwd + '/' + name;
+      if (dirs[cwd].indexOf(name) === -1) {
+        dirs[cwd].push(name);
+        files[t] = '';
+      }
+    },
+    rm: function (args) {
+      if (!args.length) { printOut('rm: missing operand'); return; }
+      var name = args[0];
+      var t = cwd + '/' + name;
+      if (name === 'Stress.md' || t === '~/Stress.md') {
+        printOut('rm: cannot remove ' + name + ': Permission denied', 'dim');
+        printOut('   Stress.md adalah file sistem yang penting. Maaf.');
+        return;
+      }
+      var idx = dirs[cwd].indexOf(name);
+      if (idx === -1) { printOut('rm: cannot remove ' + name + ': No such file'); return; }
+      dirs[cwd].splice(idx, 1);
+      delete files[t];
+    },
+    echo: function (args) { printOut(args.join(' ')); },
+    date: function () { printOut(new Date().toString()); },
+    motto: function () { printOut(mottos[Math.floor(Math.random() * mottos.length)]); },
+    clear: function () { screen.innerHTML = ''; },
+    exit: function () { printOut('Mau keluar? Kan masih ada cerita yang belum selesai.'); },
+    sudo: function () { printOut('Mori: sudo tidak ada di sini. Cukup jadi diri sendiri.'); },
+    neofetch: function () {
+      printOut('Mori@LycorisRadiata\n' +
+        'OS: sebuah hati yang sedang berjalan\n' +
+        'Shell: jujur\n' +
+        'Uptime: 22 jam, dan tetap bertahan');
+    }
+  };
+
+  function run(cmd) {
+    printCmdLine(cmd);
+    var parts = cmd.trim().split(/\s+/);
+    var name = parts[0];
+    var args = parts.slice(1);
+    if (!name) { return; }
+    var fn = commands[name];
+    if (fn) { fn(args); }
+    else { printOut('zsh: command not found: ' + name); }
+  }
+
+  function onEnter() {
+    var cmd = input.value;
+    input.value = '';
+    history.push(cmd);
+    hIdx = history.length;
+    run(cmd);
+  }
+
+  function typing(el, text, ms, done) {
+    var i = 0;
+    (function step() {
+      if (skip || i >= text.length) {
+        el.textContent = text;
+        if (done) { done(); }
+        return;
+      }
+      i += 1;
+      el.textContent = text.slice(0, i);
+      scroll();
+      setTimeout(step, ms);
+    })();
+  }
+
+  var boot = [
+    { out: 'Lycoris Radiata 3.14 (tty1)' },
+    { out: '[ ok ] Memuat filesystem' },
+    { out: '[ ok ] Memulai musik-player' },
+    { out: '[ ok ] Memulai blogd' },
+    { out: '' },
+    { cmd: 'whoami', out: 'Mori' },
+    { cmd: 'touch Stress.md', out: null },
+    { cmd: 'ls', out: 'Blog/   Musik/   Stress.md' },
+    { cmd: 'cat > Stress.md <<EOF', out: files['~/Stress.md'] },
+    { out: 'EOF', dim: true }
+  ];
+
+  function runBoot() {
+    var i = 0;
+    function next() {
+      if (skip || i >= boot.length) { finish(); return; }
+      var step = boot[i];
+      i += 1;
+      if (step.cmd != null) {
+        var div = document.createElement('div');
+        div.className = 'term-out';
+        div.innerHTML = promptMarkup();
+        var span = document.createElement('span');
+        div.appendChild(span);
+        screen.appendChild(div);
+        typing(span, step.cmd, 26, function () {
+          if (step.out !== null) { printOut(step.out); }
+          setTimeout(next, 220);
+        });
+      } else {
+        printOut(step.out, step.dim ? 'dim' : null);
+        setTimeout(next, step.out === '' ? 100 : 300);
+      }
+    }
+    next();
+  }
+
+  function finish() {
+    input.disabled = false;
+    input.focus();
+  }
+
+  function skipAll() { skip = true; }
+
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { e.preventDefault(); onEnter(); }
+    else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (hIdx > 0) { hIdx -= 1; input.value = history[hIdx]; }
+    }
+    else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (hIdx < history.length - 1) { hIdx += 1; input.value = history[hIdx]; }
+      else { hIdx = history.length; input.value = ''; }
+    }
+  });
+
+  term.addEventListener('mousedown', function () { input.focus(); });
+
+  document.addEventListener('keydown', skipAll, true);
+  document.addEventListener('mousedown', skipAll, true);
+
+  runBoot();
+})();
+</script>
+
+  </main>
 </article>
-   
-<article class="article-block">  
-  
-  <div class="article-content">
-    <div class="article-header">
-        <a href="https://blog.morixhikari.my.id/posts/whoami/" class="title-link">
-            <h2 class="heading">[mori@LycorisRadiata ~]$ whoami</h2>
-        </a>
-    </div>
-    
-    <div class="article-summary">
-        <p class="description">whoami</p>
-    </div>
-
-    <div class="meta-line">
-        
-        
-        
-        <span class="date">Aug. 05, 2026</span>
-        
-        
-        
-        <span class="separator">/</span>
-        <span class="tags">
-        
-        <a href="https://blog.morixhikari.my.id/tags/curhatan/">#Curhatan</a>
-        
-        </span>
-        
-    </div>
-  </div>
-</article>
-   
-<article class="article-block">  
-  
-  <div class="article-content">
-    <div class="article-header">
-        <a href="https://blog.morixhikari.my.id/posts/tugas-sepertinya/" class="title-link">
-            <h2 class="heading">Tugas Sepertinya</h2>
-        </a>
-    </div>
-    
-    <div class="article-summary">
-        <p class="description">Service Jaringan Komputer</p>
-    </div>
-
-    <div class="meta-line">
-        
-        
-        
-        <span class="date">Aug. 04, 2026</span>
-        
-        
-        
-        <span class="separator">/</span>
-        <span class="tags">
-        
-        <a href="https://blog.morixhikari.my.id/tags/curhatan/">#Curhatan</a>
-        
-        <a href="https://blog.morixhikari.my.id/tags/learn/">#Learn</a>
-        
-        <a href="https://blog.morixhikari.my.id/tags/tech/">#Tech</a>
-        
-        <a href="https://blog.morixhikari.my.id/tags/literature/">#Literature</a>
-        
-        </span>
-        
-    </div>
-  </div>
-</article>
-   
-<article class="article-block">  
-  
-  <div class="article-content">
-    <div class="article-header">
-        <a href="https://blog.morixhikari.my.id/posts/dunia-punya-norma/" class="title-link">
-            <h2 class="heading">Ancaman Non Militer</h2>
-        </a>
-    </div>
-    
-    <div class="article-summary">
-        <p class="description">Sebuah curahan hati tentang cinta, penerimaan, dan harapan untuk tetap bersama meski harus menghadapi penilaian dari sekitar.</p>
-    </div>
-
-    <div class="meta-line">
-        
-        
-        
-        <span class="date">Jul. 22, 2026</span>
-        
-        
-        
-        <span class="separator">/</span>
-        <span class="tags">
-        
-        <a href="https://blog.morixhikari.my.id/tags/curhatan/">#Curhatan</a>
-        
-        <a href="https://blog.morixhikari.my.id/tags/relationship/">#Relationship</a>
-        
-        </span>
-        
-    </div>
-  </div>
-</article>
-   
-<article class="article-block">  
-  
-  <div class="article-content">
-    <div class="article-header">
-        <a href="https://blog.morixhikari.my.id/posts/iridaceae/" class="title-link">
-            <h2 class="heading">Bumi Pasundan</h2>
-        </a>
-    </div>
-    
-    <div class="article-summary">
-        <p class="description">Bumi Pasundan lahir ketika Tuhan sedang tersenyum.</p>
-    </div>
-
-    <div class="meta-line">
-        
-        
-        
-        <span class="date">Jul. 02, 2026</span>
-        
-        
-        
-        <span class="separator">/</span>
-        <span class="tags">
-        
-        <a href="https://blog.morixhikari.my.id/tags/curhatan/">#Curhatan</a>
-        
-        <a href="https://blog.morixhikari.my.id/tags/relationship/">#Relationship</a>
-        
-        </span>
-        
-    </div>
-  </div>
-</article>
-   
-<article class="article-block">  
-  
-  <div class="article-content">
-    <div class="article-header">
-        <a href="https://blog.morixhikari.my.id/posts/amor-fati/" class="title-link">
-            <h2 class="heading">Amor Fati</h2>
-        </a>
-    </div>
-    
-    <div class="article-summary">
-        <p class="description">Auh cape aku</p>
-    </div>
-
-    <div class="meta-line">
-        
-        
-        
-        <span class="date">Jun. 17, 2026</span>
-        
-        
-        
-        <span class="separator">/</span>
-        <span class="tags">
-        
-        <a href="https://blog.morixhikari.my.id/tags/curhatan/">#Curhatan</a>
-        
-        <a href="https://blog.morixhikari.my.id/tags/hope/">#Hope</a>
-        
-        </span>
-        
-    </div>
-  </div>
-</article>
-   
-<article class="article-block">  
-  
-  <div class="article-content">
-    <div class="article-header">
-        <a href="https://blog.morixhikari.my.id/posts/did-i-deserve-the-sunshine/" class="title-link">
-            <h2 class="heading">I&#x27;ll Believe In Anything</h2>
-        </a>
-    </div>
-    
-    <div class="article-summary">
-        <p class="description">Janji sama aku, ya, untuk terus melanjutkan hidup. Jangan tinggalkan aku sendirian. &gt;_&lt;</p>
-    </div>
-
-    <div class="meta-line">
-        
-        
-        
-        <span class="date">Jun. 08, 2026</span>
-        
-        
-        
-        <span class="separator">/</span>
-        <span class="tags">
-        
-        <a href="https://blog.morixhikari.my.id/tags/curhatan/">#Curhatan</a>
-        
-        <a href="https://blog.morixhikari.my.id/tags/relationship/">#Relationship</a>
-        
-        </span>
-        
-    </div>
-  </div>
-</article>
-   
-<article class="article-block">  
-  
-  <div class="article-content">
-    <div class="article-header">
-        <a href="https://blog.morixhikari.my.id/posts/suicide-is-a-permanent-solution-to-a-temporary-problem/" class="title-link">
-            <h2 class="heading">Aku Harap di Siklus Selanjutnya Aku Tidak Mengulangi Kesalahan yang Sama</h2>
-        </a>
-    </div>
-    
-    <div class="article-summary">
-        <p class="description">Cerita tentang hubungan, kehidupan sosial, rasa lelah menjadi diri sendiri, dan harapan agar semuanya tidak terulang lagi.</p>
-    </div>
-
-    <div class="meta-line">
-        
-        
-        
-        <span class="date">May. 20, 2026</span>
-        
-        
-        
-        <span class="separator">/</span>
-        <span class="tags">
-        
-        <a href="https://blog.morixhikari.my.id/tags/curhatan/">#Curhatan</a>
-        
-        </span>
-        
-    </div>
-  </div>
-</article>
-   
-<article class="article-block">  
-  
-  <div class="article-content">
-    <div class="article-header">
-        <a href="https://blog.morixhikari.my.id/posts/waktu/" class="title-link">
-            <h2 class="heading">Waktu</h2>
-        </a>
-    </div>
-    
-    <div class="article-summary">
-        <p class="description">Lima Minggu</p>
-    </div>
-
-    <div class="meta-line">
-        
-        
-        
-        <span class="date">Apr. 12, 2026</span>
-        
-        
-        
-        <span class="separator">/</span>
-        <span class="tags">
-        
-        <a href="https://blog.morixhikari.my.id/tags/literature/">#Literature</a>
-        
-        <a href="https://blog.morixhikari.my.id/tags/story/">#Story</a>
-        
-        <a href="https://blog.morixhikari.my.id/tags/imagination/">#Imagination</a>
-        
-        </span>
-        
-    </div>
-  </div>
-</article>
-   
-<article class="article-block">  
-  
-  <div class="article-content">
-    <div class="article-header">
-        <a href="https://blog.morixhikari.my.id/posts/nlh/" class="title-link">
-            <h2 class="heading">NO LONGER HUMAN Part One</h2>
-        </a>
-    </div>
-    
-    <div class="article-summary">
-        <p class="description">Halo yall gue bahas satu bab aja dulu karena belum habis aku bacanya</p>
-    </div>
-
-    <div class="meta-line">
-        
-        
-        
-        <span class="date">Mar. 26, 2026</span>
-        
-        
-        
-        <span class="separator">/</span>
-        <span class="tags">
-        
-        <a href="https://blog.morixhikari.my.id/tags/literature/">#Literature</a>
-        
-        <a href="https://blog.morixhikari.my.id/tags/review/">#Review</a>
-        
-        </span>
-        
-    </div>
-  </div>
-</article>
- 
-
-  <div class="ad"> </div>
-
-  <div class="pagination-footer">
-     
-<aside class="paginator">
-        
-  <a class="link -highlight" href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;posts&#x2F;page&#x2F;1"
-    ><span class="number">1</span></a
-  >
-    
-  <a class="link" href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;posts&#x2F;page&#x2F;2"
-    ><span class="number">2</span></a
-  >
-    
-  <a class="link" href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;posts&#x2F;page&#x2F;3"
-    ><span class="number">3</span></a
-  >
-   
-</aside>
- 
-    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;posts&#x2F;page&#x2F;2&#x2F;" class="next-link">Next →</a>
-    
-  </div>
-</main>
 
       </div>
     </div>

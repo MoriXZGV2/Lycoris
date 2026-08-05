@@ -8,6 +8,26 @@
 	<updated>2026-08-05T00:00:00+00:00</updated>
 	<id>https://blog.morixhikari.my.id/atom.xml</id>
 	<entry xml:lang="en">
+		<title>[mori@LycorisRadiata ~]$ cat</title>
+		<published>2026-08-05T00:00:00+00:00</published>
+		<updated>2026-08-05T00:00:00+00:00</updated>
+		<link href="https://blog.morixhikari.my.id/posts/cat/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/cat/</id>
+			
+		
+		<summary>
+  Mori@LycorisRadiata: ~
+  
+  
+    [Mori@LycorisRadiata ~]$
+    
+  
+
+Ketik help, lalu tekan Enter.
+…</summary>
+		
+	</entry>
+	<entry xml:lang="en">
 		<title>[mori@LycorisRadiata ~]$ whoami</title>
 		<published>2026-08-05T00:00:00+00:00</published>
 		<updated>2026-08-05T00:00:00+00:00</updated>
