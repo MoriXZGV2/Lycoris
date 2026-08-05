@@ -180,31 +180,12 @@
     .motto {
         font-family: 'Ysabeau', 'LXGW Bright', sans-serif;
         font-style: italic;
-        font-size: 1.1em;
-        line-height: 1.6;
+        font-size: 0.9em;
         color: var(--text-color-light);
-        opacity: 0.9;
-        margin: 0.9em auto 0;
-        padding: 0.5em 0;
+        opacity: 0.6;
+        margin: 0.6em 0 0;
         text-align: center;
-        min-height: 1.6em;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .motto::before {
-        content: "\2014\00a0";
-        opacity: 0.4;
-    }
-
-    .motto::after {
-        content: "\00a0\2014";
-        opacity: 0.4;
-    }
-
-    .motto:empty::before,
-    .motto:empty::after {
-        content: none;
+        min-height: 1.4em;
     }
 }
 
@@ -219,4 +200,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.home-recent {
+    width: 100%;
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 1.5em 4em;
+
+    > .heading {
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+
+    .article-list {
+        display: grid;
+        row-gap: 1.5em;
+    }
 }

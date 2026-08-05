@@ -33,6 +33,7 @@ theme = "catppuccin-mocha"
 main_section = "posts"
 math_display = "mathjax"
 avatar = "images/pfp.jpg"
+home_recent_posts = 3
 motto_mode = "multi"
 
 mottos = [

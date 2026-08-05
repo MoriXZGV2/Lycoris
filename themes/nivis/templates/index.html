@@ -72,4 +72,16 @@
   </div>
 </div>
 
+{% if config.extra.home_recent_posts and config.extra.home_recent_posts > 0 %}
+{% set posts_section = get_section(path="posts/_index.md") %}
+<div class="home-recent">
+  <h2 class="heading">Recent Posts</h2>
+  <main class="article-list">
+    {% for post in posts_section.pages | slice(start=0, end=config.extra.home_recent_posts) %}
+    {{ macros::article_block(post=post) }}
+    {% endfor %}
+  </main>
+</div>
+{% endif %}
+
 {% endblock content %}
