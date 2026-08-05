@@ -364,9 +364,12 @@ body {
 }
 
 .body-block .article-content,
-.article-block .article-content,
+.article-block .article-content {
+    font-size: 1.3em;
+}
+
 .home-recent .recent-title {
-    font-size: 1.05em;
+    font-size: 1.15em;
 }
 
 code {
