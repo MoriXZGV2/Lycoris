@@ -41,9 +41,9 @@ build_search_index = false
 #
 
 [markdown]
+render_emoji = true
 github_alerts = true
 bottom_footnotes = true
-render_emoji = true
 
 [markdown.highlighting]
 style = "class"
@@ -56,6 +56,18 @@ main_section = "posts"
 math_display = "mathjax"
 avatar = ""
 
+home_layout = "focus"
+motto_mode = "multi"
+home_recent_posts = 3
+
+mottos = [
+    "Code is poetry",
+    "Simplicity is the ultimate sophistication",
+    "Stay hungry, stay foolish",
+]
+
 social_links = [
     { name = "github", url = "https://github.com/Resorie/zola-theme-nivis" }
 ]
+
+

@@ -12,7 +12,18 @@ min_version = "0.21.0"
 # be merged with user data, some kind of prefix or nesting is preferable
 # Use snake_casing to be consistent with the rest of Zola
 [extra]
-main_section = "blog"
+main_section = "posts"
+home_layout = "focus"
+motto_mode = "hide"
+home_greeting = false
+home_recent_posts = 0
+
+[extra.sections]
+posts = true
+about = true
+archive = true
+tags = true
+links = true
 
 # The theme author info: you!
 [author]

@@ -136,7 +136,7 @@
       mask.classList.toggle("open");
     }
 
-    const getPreferredScheme = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const getPreferredScheme = () => 'dark';
 
     function updateThemeIcon(scheme) {
       const themeIcon = document.getElementById("theme-icon");
@@ -172,13 +172,13 @@
         document.documentElement.style.colorScheme = savedTheme;
         updateThemeIcon(savedTheme);
       } else {
+        document.documentElement.style.colorScheme = systemTheme;
         updateThemeIcon(systemTheme);
       }
 
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
         if (!localStorage.getItem("theme")) {
-          const newScheme = e.matches ? 'dark' : 'light';
-          updateThemeIcon(newScheme);
+          updateThemeIcon('dark');
         }
       });
     })();

@@ -15,10 +15,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkaibright/dist/LXGWBright-Regular/result.css' />
   <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/syst/dist/SourceHanSerifCN/result.css' />
-  <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.10/mmenu.min.css">
   <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.style.colorScheme = savedTheme;
+      }
+    })();
+  </script>
 
   {% if config.extra.math_display == "mathjax" %}
   <script>
@@ -31,48 +38,22 @@
       },
       options: {
         skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-      },
-      chtml: {
-        fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2'
       }
     };
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
   <script>
       document.addEventListener("DOMContentLoaded", function() {
-          const MATH_LANGS = ['math', 'math-display'];
-
-          // 1. Display Math (``` ... ```)
-          document.querySelectorAll('pre code').forEach(el => {
-              let lang = el.dataset.lang || '';
-              if (!lang) {
-                  el.classList.forEach(cls => {
-                      if (cls.startsWith('language-')) lang = cls.replace('language-', '');
-                  });
-              }
-              
-              if (MATH_LANGS.includes(lang.toLowerCase())) {
-                  const pre = el.parentElement;
-                  const div = document.createElement('div');
-                  div.textContent = el.textContent.trim();
-                  pre.replaceWith(div);
-              }
-          });
-
-          // 2. Inline Math (`$ ... $`)
+          // Inline Math: unwrap `$...$` from <code> tags
           document.querySelectorAll('code').forEach(el => {
               if (el.parentElement.tagName === 'PRE') return;
-
               const text = el.textContent.trim();
-              // Check if it looks like math: $...$
               if (text.startsWith('$') && text.endsWith('$') && !text.startsWith('$$')) {
                   const span = document.createElement('span');
                   span.textContent = text;
                   el.replaceWith(span);
               }
           });
-          
-          // Trigger MathJax to process the new elements
           if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
               MathJax.typesetPromise();
           }
@@ -100,6 +81,13 @@
           <div class="description">
             <p>{{ config.description }}</p>
           </div>
+          {% if config.extra.motto_mode and config.extra.motto_mode != "hide" %}
+            {% if config.extra.motto_mode == "single" and config.extra.motto %}
+            <p class="motto">{{ config.extra.motto }}</p>
+            {% elif config.extra.motto_mode == "multi" and config.extra.mottos %}
+            <p class="motto" data-mottos='{{ config.extra.mottos | json_encode | safe }}'></p>
+            {% endif %}
+          {% endif %}
         </div>
       </div>
       <ul class="social-links">
@@ -111,15 +99,31 @@
         </li>
         {% endfor %}
       </ul>
+
+      {% if config.extra.sections.about | default(value=true) %}
       <div class="sidebar-action">
         <a href="{{ get_url(path="@/about/index.md", lang=lang) }}">About Me</a>
       </div>
+      {% endif %}
+
       <nav class="sidebar-nav">
         <a href="{{ get_url(path="@/_index.md", lang=lang) }}">Home</a>
+
+        {% if config.extra.sections.posts | default(value=true) %}
         <a href="{{ get_url(path="@/posts/_index.md", lang=lang) }}">Posts</a>
+        {% endif %}
+
+        {% if config.extra.sections.archive | default(value=true) %}
         <a href="{{ get_url(path="@/archive/index.md", lang=lang) }}">Archives</a>
+        {% endif %}
+
+        {% if config.extra.sections.tags | default(value=true) %}
         <a href="{{ get_url(path="@/tags/_index.md", lang=lang) }}">Categories</a>
+        {% endif %}
+
+        {% if config.extra.sections.links | default(value=true) %}
         <a href="{{ get_url(path="@/links/index.md", lang=lang) }}">Links</a>
+        {% endif %}
       </nav>
     </div>
   </div>
@@ -130,11 +134,26 @@
     <div class="page-top animated fadeInDown">
       <nav class="nav">
         <a href="{{ get_url(path="@/_index.md", lang=lang) }}">Home</a>
+
+        {% if config.extra.sections.posts | default(value=true) %}
         <a href="{{ get_url(path="@/posts/_index.md", lang=lang) }}" {% if current_path is starting_with("/posts") %}class="active"{% endif %}>Posts</a>
+        {% endif %}
+
+        {% if config.extra.sections.about | default(value=true) %}
         <a href="{{ get_url(path="@/about/index.md", lang=lang) }}" {% if current_path is starting_with("/about") %}class="active"{% endif %}>About</a>
+        {% endif %}
+
+        {% if config.extra.sections.archive | default(value=true) %}
         <a href="{{ get_url(path="@/archive/index.md", lang=lang) }}" {% if current_path is starting_with("/archive") %}class="active"{% endif %}>Archives</a>
+        {% endif %}
+
+        {% if config.extra.sections.tags | default(value=true) %}
         <a href="{{ get_url(path="@/tags/_index.md", lang=lang) }}" {% if current_path is starting_with("/tags") %}class="active"{% endif %}>Categories</a>
+        {% endif %}
+
+        {% if config.extra.sections.links | default(value=true) %}
         <a href="{{ get_url(path="@/links/index.md", lang=lang) }}" {% if current_path is starting_with("/links") %}class="active"{% endif %}>Links</a>
+        {% endif %}
       </nav>
       <div class="information">
         <div class="back_btn">
@@ -193,11 +212,7 @@
 
     function toggleTheme() {
       const root = document.documentElement;
-      const systemScheme = getPreferredScheme();
-      const currentInlineScheme = root.style.colorScheme;
-      
-      // Calculate effective scheme
-      const effectiveScheme = currentInlineScheme || systemScheme;
+      const effectiveScheme = root.style.colorScheme || getPreferredScheme();
       const targetScheme = effectiveScheme === 'dark' ? 'light' : 'dark';
 
       root.style.colorScheme = targetScheme;
@@ -205,20 +220,12 @@
       updateThemeIcon(targetScheme);
     }
 
-    // Initialize theme
+    // Initialize theme icon
     (function() {
       const savedTheme = localStorage.getItem("theme");
       const systemTheme = getPreferredScheme();
-      
-      if (savedTheme) {
-        document.documentElement.style.colorScheme = savedTheme;
-        updateThemeIcon(savedTheme);
-      } else {
-        document.documentElement.style.colorScheme = systemTheme;
-        updateThemeIcon(systemTheme);
-      }
+      updateThemeIcon(savedTheme || systemTheme);
 
-      // Listen for system changes
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
         if (!localStorage.getItem("theme")) {
           updateThemeIcon('dark');
@@ -226,16 +233,15 @@
       });
     })();
 
-    // Footnote Navigation & Code Block Label
+    // Footnote Navigation & Code Block Processing
     document.addEventListener("DOMContentLoaded", function() {
         const MATH_LANGS = ['math', 'math-display', 'tex', 'latex'];
 
-        // Code Block Language Label
+        // Process code blocks: create sticky headers
         document.querySelectorAll('pre code').forEach(code => {
             const pre = code.parentElement;
             let lang = pre.getAttribute('data-lang');
 
-            // 1. Try to recover lang if not on pre
             if (!lang) {
                 const codeLang = code.getAttribute('data-lang');
                 if (codeLang) {
@@ -252,34 +258,101 @@
                 if (lang) pre.setAttribute('data-lang', lang);
             }
 
-            // 2. Process Math Blocks
+            // Skip math blocks
             if (lang && MATH_LANGS.includes(lang.toLowerCase())) {
                 const div = document.createElement('div');
                 div.classList.add('math-display');
                 let mathContent = code.textContent.trim();
-                
-                // Auto-wrap if typical delimiters are missing
                 if (!mathContent.startsWith('$$') && !mathContent.startsWith('\\[')) {
                     mathContent = '$$' + mathContent + '$$';
                 }
-                
                 div.textContent = mathContent;
                 pre.replaceWith(div);
+                return;
+            }
+
+            // Create sticky header
+            if (!pre.querySelector('.code-header')) {
+                const header = document.createElement('div');
+                header.className = 'code-header';
+
+                const dots = document.createElement('span');
+                dots.className = 'code-dots';
+                dots.innerHTML = '<span></span><span></span><span></span>';
+
+                const right = document.createElement('span');
+                right.className = 'code-header-right';
+
+                if (lang) {
+                    const langLabel = document.createElement('span');
+                    langLabel.className = 'code-lang';
+                    langLabel.textContent = lang.toUpperCase();
+                    right.appendChild(langLabel);
+                }
+
+                const btn = document.createElement('button');
+                btn.className = 'code-copy-btn';
+                btn.setAttribute('aria-label', 'Copy code');
+                btn.innerHTML = '<i class="fa-regular fa-copy"></i>';
+                btn.addEventListener('click', () => {
+                    navigator.clipboard.writeText(code.textContent).then(() => {
+                        btn.innerHTML = '<i class="fa-solid fa-check"></i>';
+                        setTimeout(() => btn.innerHTML = '<i class="fa-regular fa-copy"></i>', 1500);
+                    });
+                });
+                right.appendChild(btn);
+
+                header.appendChild(dots);
+                header.appendChild(right);
+                pre.insertBefore(header, code);
             }
         });
 
-        // 3. Process Inline Math
-        // Zola (or Markdown) often renders `$E=mc^2$` as <code>$E=mc^2$</code>.
-        // We need to unwrap this code tag so MathJax can process it without code styling.
+        // Process Inline Math
         document.querySelectorAll(':not(pre) > code').forEach(code => {
             const text = code.textContent.trim();
-            // Check for $...$ (and not $$...$$) or \(...\)
             if ( (text.startsWith('$') && text.endsWith('$') && !text.startsWith('$$')) ||
                  (text.startsWith('\\(') && text.endsWith('\\)')) ) {
                  const span = document.createElement('span');
                  span.textContent = text;
                  code.replaceWith(span);
             }
+        });
+
+        // Motto typewriter (all [data-mottos] elements)
+        document.querySelectorAll('[data-mottos]').forEach(function(el) {
+            var mottos = JSON.parse(el.dataset.mottos);
+            if (!mottos || mottos.length === 0) return;
+            // Reduced motion: render the first motto statically, no typing loop.
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                el.textContent = mottos[0];
+                return;
+            }
+            var idx = 0, charIdx = 0, deleting = false;
+            function tick() {
+                var current = mottos[idx];
+                if (!deleting) {
+                    charIdx++;
+                    el.textContent = current.substring(0, charIdx);
+                    if (charIdx === current.length) {
+                        deleting = true;
+                        setTimeout(tick, 2500);
+                        return;
+                    }
+                    setTimeout(tick, 80 + Math.random() * 40);
+                } else {
+                    charIdx--;
+                    el.textContent = current.substring(0, charIdx);
+                    if (charIdx === 0) {
+                        deleting = false;
+                        idx = (idx + 1) % mottos.length;
+                        setTimeout(tick, 400);
+                        return;
+                    }
+                    setTimeout(tick, 35);
+                }
+            }
+            tick();
         });
     });
   </script>
