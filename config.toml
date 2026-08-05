@@ -33,6 +33,16 @@ theme = "catppuccin-mocha"
 main_section = "posts"
 math_display = "mathjax"
 avatar = "images/pfp.jpg"
+motto_mode = "multi"
+
+mottos = [
+    "Cogito ergo sum",
+    "Memento mori, memento vivere",
+    "Labor omnia vincit",
+    "Amor fati",
+    "Sic itur ad astra",
+    "Audentes fortuna iuvat",
+]
 
 social_links = [
     # Add your social media links here
