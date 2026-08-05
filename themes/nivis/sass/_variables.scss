@@ -21,35 +21,35 @@
         --gutter-h-narrow: calc((100vw - 400px) / 3);
     }
 
-    /* Colors */
-    --text-color: light-dark(hsla(0, 0%, 20%, 1.0), #f2e9e1);
-    --text-color-light: light-dark(hsla(0, 0%, 40%, 1.0), hsla(34, 40%, 82%, 1.0));
-    --bg-color: light-dark(#f2e9e1, #2a273f);
-    --sidebar-bg: light-dark(hsla(0, 0%, 100%, 0.9), hsla(247, 24%, 20%, 0.9));
-    --border-color: light-dark(hsla(0, 0%, 70%, 1.0), hsla(247, 12%, 38%, 1.0));
-    --code-bg: light-dark(hsla(0, 0%, 96%, 1.0), hsla(247, 24%, 14%, 1.0));
-    --btn-bg: light-dark(hsla(0, 0%, 60%, 1.0), hsla(247, 15%, 35%, 1.0));
-    --btn-hover: light-dark(hsla(0, 0%, 50%, 1.0), hsla(247, 15%, 45%, 1.0));
+    /* Colors (Gruvbox) */
+    --text-color: light-dark(#3c3836, #ebdbb2);
+    --text-color-light: light-dark(#665c54, #bdae93);
+    --bg-color: light-dark(#fbf1c7, #282828);
+    --sidebar-bg: light-dark(rgba(251, 241, 199, 0.9), rgba(40, 40, 40, 0.9));
+    --border-color: light-dark(#d5c4a1, #504945);
+    --code-bg: light-dark(#ebdbb2, #1d2021);
+    --btn-bg: light-dark(#bdae93, #665c54);
+    --btn-hover: light-dark(#a89984, #7c6f64);
     --shadow-color: light-dark(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
-    --social-bg: light-dark(hsla(0, 0%, 95%, 1.0), hsla(247, 20%, 16%, 1.0));
-    --social-border: light-dark(hsla(0, 0%, 90%, 1.0), hsla(247, 15%, 22%, 1.0));
-    --social-hover-bg: light-dark(hsla(0, 0%, 100%, 1.0), hsla(247, 15%, 24%, 1.0));
+    --social-bg: light-dark(#ebdbb2, #3c3836);
+    --social-border: light-dark(#d5c4a1, #504945);
+    --social-hover-bg: light-dark(#d5c4a1, #504945);
     --pre-shadow: light-dark(0 0 30px -10px hsla(0, 0%, 70%, 1.0), 0 0 30px -10px rgba(0, 0, 0, 0.5));
-    --table-header-bg: light-dark(hsla(0, 0%, 80%, 1.0), hsla(247, 15%, 22%, 1.0));
-    --table-cell-bg: light-dark(hsla(0, 0%, 90%, 1.0), hsla(247, 15%, 16%, 1.0));
+    --table-header-bg: light-dark(#ebdbb2, #504945);
+    --table-cell-bg: light-dark(#f2e5bc, #3c3836);
 
-    /* Syntax Highlighting */
-    --z-text: light-dark(#383a42, #abb2bf);
-    --z-comment: light-dark(#a0a1a7, #5c6370);
-    --z-punctuation: light-dark(#383a42, #abb2bf);
-    --z-keyword: light-dark(#a626a4, #c678dd);
-    --z-string: light-dark(#50a14f, #98c379);
-    --z-type: light-dark(#c18401, #e5c07b);
-    --z-constant: light-dark(#986801, #d19a66);
-    --z-entity: light-dark(#4078f2, #61afef);
-    --z-variable: light-dark(#986801, #e06c75);
-    --z-storage: light-dark(#a626a4, #c678dd);
-    --z-support: light-dark(#c18401, #e5c07b);
+    /* Syntax Highlighting (Gruvbox) */
+    --z-text: light-dark(#3c3836, #ebdbb2);
+    --z-comment: light-dark(#928374, #928374);
+    --z-punctuation: light-dark(#504945, #a89984);
+    --z-keyword: light-dark(#9d0006, #fb4934);
+    --z-string: light-dark(#79740e, #b8bb26);
+    --z-type: light-dark(#b57614, #fabd2f);
+    --z-constant: light-dark(#af3a03, #fe8019);
+    --z-entity: light-dark(#076678, #83a598);
+    --z-variable: light-dark(#427b58, #8ec07c);
+    --z-storage: light-dark(#8f3f71, #d3869b);
+    --z-support: light-dark(#427b58, #8ec07c);
 }
 
 @mixin responsive-gutter($prop: padding, $extra: 0px) {
