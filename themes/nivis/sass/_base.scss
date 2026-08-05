@@ -358,3 +358,17 @@ body,
 .topbar, .page-footer, .home-intro, .home-recent .recent-list, .recent-link, .content-aside {
     font-family: var(--font-mono) !important;
 }
+
+body {
+    font-size: 1.25rem;
+}
+
+.body-block .article-content,
+.article-block .article-content,
+.home-recent .recent-title {
+    font-size: 1.15em;
+}
+
+code {
+    font-size: 0.95em !important;
+}
