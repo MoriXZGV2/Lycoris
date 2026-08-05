@@ -21,17 +21,7 @@
         </div>
         {% endif %}
         <div class="terminal-card">
-          <div class="terminal-bar">
-            <span class="t-dot t-red"></span>
-            <span class="t-dot t-yellow"></span>
-            <span class="t-dot t-green"></span>
-            <span class="t-title">mori@Myosotis: ~</span>
-          </div>
           <div class="terminal-body">
-            <p class="t-line"><span class="tp-user">mori</span><span class="tp-at">@</span><span class="tp-host">Myosotis</span><span class="tp-path">:~$</span> <span class="t-cmd">whoami</span></p>
-            <p class="t-line t-out">{{ config.title }}</p>
-            <p class="t-line"><span class="tp-user">mori</span><span class="tp-at">@</span><span class="tp-host">Myosotis</span><span class="tp-path">:~$</span> <span class="t-cmd">cat about.txt</span></p>
-            <p class="t-line t-out">{{ config.description }}</p>
             {# --- Motto as typed command --- #}
             {% if config.extra.motto_mode and config.extra.motto_mode != "hide" %}
               <p class="t-line">
