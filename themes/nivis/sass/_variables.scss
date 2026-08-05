@@ -22,21 +22,21 @@
     }
 
     /* Colors */
-    --text-color: light-dark(hsla(0, 0%, 20%, 1.0), hsla(0, 0%, 85%, 1.0));
-    --text-color-light: light-dark(hsla(0, 0%, 40%, 1.0), hsla(0, 0%, 65%, 1.0));
-    --bg-color: light-dark(white, black);
-    --sidebar-bg: light-dark(hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 0%, 0.9));
-    --border-color: light-dark(hsla(0, 0%, 70%, 1.0), hsla(0, 0%, 25%, 1.0));
-    --code-bg: light-dark(hsla(0, 0%, 96%, 1.0), hsla(0, 0%, 6%, 1.0));
-    --btn-bg: light-dark(hsla(0, 0%, 60%, 1.0), hsla(0, 0%, 35%, 1.0));
-    --btn-hover: light-dark(hsla(0, 0%, 50%, 1.0), hsla(0, 0%, 45%, 1.0));
+    --text-color: light-dark(hsla(0, 0%, 20%, 1.0), #f2e9e1);
+    --text-color-light: light-dark(hsla(0, 0%, 40%, 1.0), hsla(34, 40%, 82%, 1.0));
+    --bg-color: light-dark(#f2e9e1, #2a273f);
+    --sidebar-bg: light-dark(hsla(0, 0%, 100%, 0.9), hsla(247, 24%, 20%, 0.9));
+    --border-color: light-dark(hsla(0, 0%, 70%, 1.0), hsla(247, 12%, 38%, 1.0));
+    --code-bg: light-dark(hsla(0, 0%, 96%, 1.0), hsla(247, 24%, 14%, 1.0));
+    --btn-bg: light-dark(hsla(0, 0%, 60%, 1.0), hsla(247, 15%, 35%, 1.0));
+    --btn-hover: light-dark(hsla(0, 0%, 50%, 1.0), hsla(247, 15%, 45%, 1.0));
     --shadow-color: light-dark(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
-    --social-bg: light-dark(hsla(0, 0%, 95%, 1.0), hsla(0, 0%, 18%, 1.0));
-    --social-border: light-dark(hsla(0, 0%, 90%, 1.0), hsla(0, 0%, 22%, 1.0));
-    --social-hover-bg: light-dark(hsla(0, 0%, 100%, 1.0), hsla(0, 0%, 22%, 1.0));
+    --social-bg: light-dark(hsla(0, 0%, 95%, 1.0), hsla(247, 20%, 16%, 1.0));
+    --social-border: light-dark(hsla(0, 0%, 90%, 1.0), hsla(247, 15%, 22%, 1.0));
+    --social-hover-bg: light-dark(hsla(0, 0%, 100%, 1.0), hsla(247, 15%, 24%, 1.0));
     --pre-shadow: light-dark(0 0 30px -10px hsla(0, 0%, 70%, 1.0), 0 0 30px -10px rgba(0, 0, 0, 0.5));
-    --table-header-bg: light-dark(hsla(0, 0%, 80%, 1.0), hsla(0, 0%, 22%, 1.0));
-    --table-cell-bg: light-dark(hsla(0, 0%, 90%, 1.0), hsla(0, 0%, 18%, 1.0));
+    --table-header-bg: light-dark(hsla(0, 0%, 80%, 1.0), hsla(247, 15%, 22%, 1.0));
+    --table-cell-bg: light-dark(hsla(0, 0%, 90%, 1.0), hsla(247, 15%, 16%, 1.0));
 
     /* Syntax Highlighting */
     --z-text: light-dark(#383a42, #abb2bf);
