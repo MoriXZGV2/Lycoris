@@ -344,13 +344,13 @@ hr {
 
 /* --- Terminal look: monospace everywhere --- */
 :root {
-    --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', 'DejaVu Sans Mono', 'Noto Sans Mono', monospace;
+    --font-mono: 'VT323', ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', 'DejaVu Sans Mono', 'Noto Sans Mono', monospace;
 }
 
 body,
 .body-block,
 .body-block h1, .body-block h2, .body-block h3, .body-block h4, .body-block h5, .body-block h6,
-.body-block p, .body-block li, .body-block em, .body-block i, .body-block strong, .body-block b,
+.body-block p, .body-block li, .body-block em, .body-block strong, .body-block b,
 .body-block blockquote,
 .body-block .article-content,
 .article-list, .article-block, .pagination-footer, .feed-dropdown,

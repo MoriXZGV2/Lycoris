@@ -1,15 +1,13 @@
-{% import "_macros.html" as macros %}
-
 <!doctype html>
-<html lang="{{ lang }}">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <title>Categories | Myosotis</title>
 
-  {% block feed_link %}
-  {% endblock feed_link %}
+  
+  
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +15,10 @@
   <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/syst/dist/SourceHanSerifCN/result.css' />
   <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.10/mmenu.min.css">
-  <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
+  <link rel="stylesheet" href="https://blog.morixhikari.my.id/style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
 
-  {% if config.extra.math_display == "mathjax" %}
+  
   <script>
     MathJax = {
       tex: {
@@ -38,70 +36,80 @@
     };
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
-  {% endif %}
+  
 
-  {% block head %}
-  {% endblock head %}
+  
+  
 </head>
 
 <body class="body-block">
   <div id="sidebar-mask" onclick="toggleSidebar()"></div>
-  {% if current_path != "/" %}
+  
   <div id="sidebar" class="">
     <div class="logo-title">
       <div class="title-inner">
-        {% if config.extra.avatar %}
+        
         <div class="avatar">
-          <img src="{{ get_url(path=config.extra.avatar) }}" alt="avatar">
+          <img src="https://blog.morixhikari.my.id/images/pfp.jpg" alt="avatar">
         </div>
-        {% endif %}
+        
         <div class="title">
-          <h3><a href="{{ get_url(path="@/_index.md", lang=lang) }}">{{ config.title }}</a></h3>
+          <h3><a href="https://blog.morixhikari.my.id/">Myosotis</a></h3>
           <div class="description">
-            <p>{{ config.description }}</p>
+            <p>Catatan tentang hiruk-pikuk diriku, sebelum waktu menghapus eksistensiku.</p>
           </div>
-          {% if config.extra.motto_mode and config.extra.motto_mode != "hide" %}
-            {% if config.extra.motto_mode == "single" and config.extra.motto %}
-            <p class="motto">{{ config.extra.motto }}</p>
-            {% elif config.extra.motto_mode == "multi" and config.extra.mottos %}
-            <p class="motto" data-mottos='{{ config.extra.mottos | json_encode | safe }}'></p>
-            {% endif %}
-          {% endif %}
+          
+            
+            <p class="motto" data-mottos='["Cogito ergo sum","Memento mori, memento vivere","Labor omnia vincit","Amor fati","Sic itur ad astra","Audentes fortuna iuvat"]'></p>
+            
+          
         </div>
       </div>
       <ul class="social-links">
-        {% for link in config.extra.social_links %}
+        
         <li>
-          <a href="{{ link.url | safe }}" aria-label="{{ link.name | title }}">
-            <i class="{{ macros::social_icon(name=link.name) }}"></i>
+          <a href="https://github.com/MoriXZGV2" aria-label="Github">
+            <i class="fab fa-github"></i>
           </a>
         </li>
-        {% endfor %}
+        
+        <li>
+          <a href="https://www.youtube.com/@MoriXZGV2" aria-label="Youtube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://x.com/MoriXZGV2" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        
       </ul>
       <div class="sidebar-action">
-        <a href="{{ get_url(path="@/about/index.md", lang=lang) }}">About Me</a>
+        <a href="https://blog.morixhikari.my.id/about/">About Me</a>
       </div>
       <nav class="sidebar-nav">
-        <a href="{{ get_url(path="@/_index.md", lang=lang) }}">Home</a>
-        <a href="{{ get_url(path="@/posts/_index.md", lang=lang) }}">Posts</a>
-        <a href="{{ get_url(path="@/archive/index.md", lang=lang) }}">Archives</a>
-        <a href="{{ get_url(path="@/tags/_index.md", lang=lang) }}">Categories</a>
-        <a href="{{ get_url(path="@/links/index.md", lang=lang) }}">Links</a>
+        <a href="https://blog.morixhikari.my.id/">Home</a>
+        <a href="https://blog.morixhikari.my.id/posts/">Posts</a>
+        <a href="https://blog.morixhikari.my.id/archive/">Archives</a>
+        <a href="https://blog.morixhikari.my.id/tags/">Categories</a>
+        <a href="https://blog.morixhikari.my.id/links/">Links</a>
       </nav>
     </div>
   </div>
-  {% endif %}
+  
 
   <div id="main">
-    {% if current_path != "/" %}
+    
     <div class="page-top animated fadeInDown">
       <nav class="nav">
-        <a href="{{ get_url(path="@/_index.md", lang=lang) }}">Home</a>
-        <a href="{{ get_url(path="@/posts/_index.md", lang=lang) }}" {% if current_path is starting_with("/posts") %}class="active"{% endif %}>Posts</a>
-        <a href="{{ get_url(path="@/about/index.md", lang=lang) }}" {% if current_path is starting_with("/about") %}class="active"{% endif %}>About</a>
-        <a href="{{ get_url(path="@/archive/index.md", lang=lang) }}" {% if current_path is starting_with("/archive") %}class="active"{% endif %}>Archives</a>
-        <a href="{{ get_url(path="@/tags/_index.md", lang=lang) }}" {% if current_path is starting_with("/tags") %}class="active"{% endif %}>Categories</a>
-        <a href="{{ get_url(path="@/links/index.md", lang=lang) }}" {% if current_path is starting_with("/links") %}class="active"{% endif %}>Links</a>
+        <a href="https://blog.morixhikari.my.id/">Home</a>
+        <a href="https://blog.morixhikari.my.id/posts/" >Posts</a>
+        <a href="https://blog.morixhikari.my.id/about/" >About</a>
+        <a href="https://blog.morixhikari.my.id/archive/" >Archives</a>
+        <a href="https://blog.morixhikari.my.id/tags/" class="active">Categories</a>
+        <a href="https://blog.morixhikari.my.id/links/" >Links</a>
       </nav>
       <div class="information">
         <div class="back_btn">
@@ -113,8 +121,8 @@
         <div class="feed_btn">
           <a class="feed-icon" aria-label="RSS Feed"><i class="fas fa-rss"></i></a>
           <div class="feed-dropdown">
-            <a href="{{ get_url(path="atom.xml") }}" target="_blank">Atom</a>
-            <a href="{{ get_url(path="rss.xml") }}" target="_blank">RSS</a>
+            <a href="https://blog.morixhikari.my.id/atom.xml" target="_blank">Atom</a>
+            <a href="https://blog.morixhikari.my.id/rss.xml" target="_blank">RSS</a>
           </div>
         </div>
         <div class="avatar_btn">
@@ -122,10 +130,106 @@
         </div>
       </div>
     </div>
-    {% endif %}
+    
     <div class="autopagerize_page_element">
-      <div class="content animated fadeIn {% if current_path == '/' %}home-content{% endif %}">
-        {% block content %}{% endblock content %}
+      <div class="content animated fadeIn ">
+        
+<main class="article-list">
+  <div class="article-header">
+    <h1 class="heading">Categories</h1>
+  </div>
+
+    
+
+  <div class="category-cloud">
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;announcement&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Announcement</span>
+      <span class="category-count">6</span>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;curhatan&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Curhatan</span>
+      <span class="category-count">14</span>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;hope&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Hope</span>
+      <span class="category-count">3</span>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;imagination&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Imagination</span>
+      <span class="category-count">2</span>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;information&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Information</span>
+      <span class="category-count">6</span>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;learn&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Learn</span>
+      <span class="category-count">2</span>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;literature&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Literature</span>
+      <span class="category-count">4</span>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;music&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Music</span>
+      <span class="category-count">1</span>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;relationship&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Relationship</span>
+      <span class="category-count">7</span>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;review&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Review</span>
+      <span class="category-count">2</span>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;schedule&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Schedule</span>
+      <span class="category-count">2</span>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;shoegaze&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Shoegaze</span>
+      <span class="category-count">1</span>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;story&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Story</span>
+      <span class="category-count">1</span>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;blog.morixhikari.my.id&#x2F;tags&#x2F;tech&#x2F;" class="category-chip">
+      <span class="category-prefix">#</span>
+      <span class="category-name">Tech</span>
+      <span class="category-count">1</span>
+    </a>
+    
+  </div>
+</main>
+
       </div>
     </div>
     <div class="page-footer">

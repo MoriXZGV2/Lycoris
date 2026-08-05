@@ -1,15 +1,13 @@
-{% import "_macros.html" as macros %}
-
 <!doctype html>
-<html lang="{{ lang }}">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <title>Endless Repetition | Myosotis</title>
 
-  {% block feed_link %}
-  {% endblock feed_link %}
+  
+  
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +15,10 @@
   <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/syst/dist/SourceHanSerifCN/result.css' />
   <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.10/mmenu.min.css">
-  <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
+  <link rel="stylesheet" href="https://blog.morixhikari.my.id/style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
 
-  {% if config.extra.math_display == "mathjax" %}
+  
   <script>
     MathJax = {
       tex: {
@@ -38,70 +36,96 @@
     };
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
-  {% endif %}
+  
 
-  {% block head %}
-  {% endblock head %}
+  
+<!-- Primary Meta Tags -->
+ 
+<meta
+  name="description"
+  content="Titik di mana rasa sakit udah nggak kerasa, karena nggak ada lagi yang bisa dirasa"
+/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="Endless Repetition | Myosotis" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.morixhikari.my.id/posts/numb/" />
+
+<meta property="article:published_time" content="2026-03-20" />
+<meta property="article:modified_time" content="2026-03-20" />
+
+<meta property="article:section" content="posts" />
+
 </head>
 
 <body class="body-block">
   <div id="sidebar-mask" onclick="toggleSidebar()"></div>
-  {% if current_path != "/" %}
+  
   <div id="sidebar" class="">
     <div class="logo-title">
       <div class="title-inner">
-        {% if config.extra.avatar %}
+        
         <div class="avatar">
-          <img src="{{ get_url(path=config.extra.avatar) }}" alt="avatar">
+          <img src="https://blog.morixhikari.my.id/images/pfp.jpg" alt="avatar">
         </div>
-        {% endif %}
+        
         <div class="title">
-          <h3><a href="{{ get_url(path="@/_index.md", lang=lang) }}">{{ config.title }}</a></h3>
+          <h3><a href="https://blog.morixhikari.my.id/">Myosotis</a></h3>
           <div class="description">
-            <p>{{ config.description }}</p>
+            <p>Catatan tentang hiruk-pikuk diriku, sebelum waktu menghapus eksistensiku.</p>
           </div>
-          {% if config.extra.motto_mode and config.extra.motto_mode != "hide" %}
-            {% if config.extra.motto_mode == "single" and config.extra.motto %}
-            <p class="motto">{{ config.extra.motto }}</p>
-            {% elif config.extra.motto_mode == "multi" and config.extra.mottos %}
-            <p class="motto" data-mottos='{{ config.extra.mottos | json_encode | safe }}'></p>
-            {% endif %}
-          {% endif %}
+          
+            
+            <p class="motto" data-mottos='["Cogito ergo sum","Memento mori, memento vivere","Labor omnia vincit","Amor fati","Sic itur ad astra","Audentes fortuna iuvat"]'></p>
+            
+          
         </div>
       </div>
       <ul class="social-links">
-        {% for link in config.extra.social_links %}
+        
         <li>
-          <a href="{{ link.url | safe }}" aria-label="{{ link.name | title }}">
-            <i class="{{ macros::social_icon(name=link.name) }}"></i>
+          <a href="https://github.com/MoriXZGV2" aria-label="Github">
+            <i class="fab fa-github"></i>
           </a>
         </li>
-        {% endfor %}
+        
+        <li>
+          <a href="https://www.youtube.com/@MoriXZGV2" aria-label="Youtube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a href="https://x.com/MoriXZGV2" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        
       </ul>
       <div class="sidebar-action">
-        <a href="{{ get_url(path="@/about/index.md", lang=lang) }}">About Me</a>
+        <a href="https://blog.morixhikari.my.id/about/">About Me</a>
       </div>
       <nav class="sidebar-nav">
-        <a href="{{ get_url(path="@/_index.md", lang=lang) }}">Home</a>
-        <a href="{{ get_url(path="@/posts/_index.md", lang=lang) }}">Posts</a>
-        <a href="{{ get_url(path="@/archive/index.md", lang=lang) }}">Archives</a>
-        <a href="{{ get_url(path="@/tags/_index.md", lang=lang) }}">Categories</a>
-        <a href="{{ get_url(path="@/links/index.md", lang=lang) }}">Links</a>
+        <a href="https://blog.morixhikari.my.id/">Home</a>
+        <a href="https://blog.morixhikari.my.id/posts/">Posts</a>
+        <a href="https://blog.morixhikari.my.id/archive/">Archives</a>
+        <a href="https://blog.morixhikari.my.id/tags/">Categories</a>
+        <a href="https://blog.morixhikari.my.id/links/">Links</a>
       </nav>
     </div>
   </div>
-  {% endif %}
+  
 
   <div id="main">
-    {% if current_path != "/" %}
+    
     <div class="page-top animated fadeInDown">
       <nav class="nav">
-        <a href="{{ get_url(path="@/_index.md", lang=lang) }}">Home</a>
-        <a href="{{ get_url(path="@/posts/_index.md", lang=lang) }}" {% if current_path is starting_with("/posts") %}class="active"{% endif %}>Posts</a>
-        <a href="{{ get_url(path="@/about/index.md", lang=lang) }}" {% if current_path is starting_with("/about") %}class="active"{% endif %}>About</a>
-        <a href="{{ get_url(path="@/archive/index.md", lang=lang) }}" {% if current_path is starting_with("/archive") %}class="active"{% endif %}>Archives</a>
-        <a href="{{ get_url(path="@/tags/_index.md", lang=lang) }}" {% if current_path is starting_with("/tags") %}class="active"{% endif %}>Categories</a>
-        <a href="{{ get_url(path="@/links/index.md", lang=lang) }}" {% if current_path is starting_with("/links") %}class="active"{% endif %}>Links</a>
+        <a href="https://blog.morixhikari.my.id/">Home</a>
+        <a href="https://blog.morixhikari.my.id/posts/" class="active">Posts</a>
+        <a href="https://blog.morixhikari.my.id/about/" >About</a>
+        <a href="https://blog.morixhikari.my.id/archive/" >Archives</a>
+        <a href="https://blog.morixhikari.my.id/tags/" >Categories</a>
+        <a href="https://blog.morixhikari.my.id/links/" >Links</a>
       </nav>
       <div class="information">
         <div class="back_btn">
@@ -113,8 +137,8 @@
         <div class="feed_btn">
           <a class="feed-icon" aria-label="RSS Feed"><i class="fas fa-rss"></i></a>
           <div class="feed-dropdown">
-            <a href="{{ get_url(path="atom.xml") }}" target="_blank">Atom</a>
-            <a href="{{ get_url(path="rss.xml") }}" target="_blank">RSS</a>
+            <a href="https://blog.morixhikari.my.id/atom.xml" target="_blank">Atom</a>
+            <a href="https://blog.morixhikari.my.id/rss.xml" target="_blank">RSS</a>
           </div>
         </div>
         <div class="avatar_btn">
@@ -122,10 +146,66 @@
         </div>
       </div>
     </div>
-    {% endif %}
+    
     <div class="autopagerize_page_element">
-      <div class="content animated fadeIn {% if current_path == '/' %}home-content{% endif %}">
-        {% block content %}{% endblock content %}
+      <div class="content animated fadeIn ">
+        
+<article class="content-article">
+  <main class="article-content">
+    <div class="article-intro-container">
+        <div class="intro-header">
+            <h1 class="heading">Endless Repetition</h1>
+            <div class="meta-line">
+                
+                <span class="date">Mar. 20, 2026</span>
+                
+                
+                
+                <span class="separator">/</span>
+                <span class="tags">
+                
+                <a href="https://blog.morixhikari.my.id/tags/relationship/">#Relationship</a>
+                
+                <a href="https://blog.morixhikari.my.id/tags/curhatan/">#Curhatan</a>
+                
+                <a href="https://blog.morixhikari.my.id/tags/hope/">#Hope</a>
+                
+                <a href="https://blog.morixhikari.my.id/tags/information/">#Information</a>
+                
+                <a href="https://blog.morixhikari.my.id/tags/announcement/">#Announcement</a>
+                
+                </span>
+                
+            </div>
+        </div>
+
+        <div class="intro-body">
+            
+            <div class="intro-abstract">
+                <div class="abstract-title">ABSTRACT</div>
+                <p class="description">Titik di mana rasa sakit udah nggak kerasa, karena nggak ada lagi yang bisa dirasa</p>
+            </div>
+            
+
+            
+        </div>
+    </div>
+    
+    <p>Masalah hidup aku cuma di situ-situ aja, kayak cerita klise yang diceritain berkali-kali sampai muak mendengarnya. Menurut aku, lebih baik aku nggak melakukan apapun yang berkaitan sama sosial karena setiap kenal sama orang baru, ada aja masalahnya. Bahkan teman terdekat aku dulu pun pernah punya masalah sama aku. Tapi ya bodoamat, sekarang kita udah berteman layaknya saudara kandung. Kadang memang agak nyebelin, tapi selama dia baik sama aku, nggak aku peduliin.</p>
+<p>Selain itu, aku juga punya satu sahabat yang dari awal kenal nggak pernah ada drama sama sekali, kita udah kayak saudara banget. Lucu juga sih, yang aku ceritain di blog ini cuma dua orang ini, seolah mereka yang nulis blog ini. Sebenarnya agak miris juga sih, aku cuma punya dua orang yang betul-betul aku anggap teman, tapi dua orang ini emang yang paling dekat sama aku.</p>
+<p>Tapi ya, aku mikir hidup aku bakalan lebih bahagia kalau nggak bersekolah di SMK yang sekarang ini. Sebut aja namanya SMK Neraka Dunia. Alasannya simpel: selama aku sekolah di sana, aku nggak pernah bahagia sama sekali. Iya, aku tau dulu aku pengen banget masuk SMK itu, tapi itu dulu. Sekarang aku baru ngerti kenapa teman aku pernah bilang kalau sosial di sekolah itu bermasalah. Dia sempat nanya, <em>"Di sana banyak yang nge-bully ya?"</em> Aku jawab nggak ada sih, tapi dari pertanyaan itu udah ketebak kenapa dia berpendapat begitu karena lingkungan sosialnya memang toxic parah.</p>
+<p>Sekarang aku udah semester 2, dan yang lebih mirisnya lagi, aku nggak punya teman sama sekali. Kadang aku sampai berpikir lebih baik mati daripada harus terus sekolah di sana, tapi aku masih mau hidup. Aku bilang kayak gitu karena kondisi mental aku emang lagi kacau banget, capek banget. Orang-orang pada jauh in aku karena aku dianggap aneh, dan pikiran itu terus muter: kalau aku nggak dijauhin, pasti sekarang aku udah punya banyak teman.</p>
+<p>Dulu waktu SMP aku pernah ngerasain hal serupa, tapi nggak separah ini. Waktu itu aku masih ditemani orang-orang di kelas, masih dianggap ada. Di SMK ini beda, aku seolah nggak eksis sama sekali. Aku yakin pas naik kelas 2, orang-orang di kelasku bakalan lupa sama aku. Siapa juga yang mau ingat orang seaneh aku? Paling mereka ingat kalau mau manfaatin aku doang, selebihnya nggak ada.</p>
+<p>Aku harap mama aku sadar kalau aku butuh pertolongannya buat pindah ke sekolah lain, aku udah kasih petunjuk. Tapi di sisi lain aku sendiri masih ragu mau pindah, karena ilmu di sekolah ini bagus banget. Bisa dibilang ilmunya "berdaging", sayang banget kalau ditinggalin. Cuma masalahnya, lingkungan sosialnya yang toxic ini udah bikin aku nggak niat belajar sama sekali. Capek. Aku cuma bisa berharap ke depannya akan membaik sedikit.</p>
+<hr />
+<p>Oh iya, soal update game, gagal total guys. Art style yang aku mau ternyata nggak sesuai sama yang aku bayangkan, karena aku kerja sama orang dari sekolah yang kita nggak terlalu akrab. Kayaknya ke depannya dia juga bakalan jauh in aku, sama kayak yang lain. Mungkin semua orang di SMK itu bakalan jauh in aku karena aku aneh, nggak pantas buat ngerasain masa-masa indah sekolah.</p>
+<p>Tapi rencananya habis Ramadan ini aku mau belajar gambar. Panas sih, tapi aku mau coba, gambar plus coding sekaligus. Kondisi mental aku juga lagi kacau, dan kalau diizinkan, aku pengen pergi ke psikiater. Belajar gambar emang susah buat aku, beda sama coding yang ngerasa lebih gampang, mungkin karena aku udah kebiasaan di dunia komputer. Tapi aku mau mulai biasain diri di dunia seni juga supaya bisa bikin aset game sendiri, ini yang terus ketunda gara-gara masalah gambar. Kalau soal codingnya sih aku bisa, bisa dibilang jago lah. Maaf sombong dikit, hehe.</p>
+<p>Yaudah, mungkin sampai sini dulu blog aku. Nulis sepanjang ini capek juga, loh.</p>
+<p><strong>Oke guys, see you next time!</strong></p>
+
+  </main>
+</article>
+
       </div>
     </div>
     <div class="page-footer">
