@@ -204,7 +204,7 @@
 
 .home-recent {
     width: 100%;
-    max-width: 48rem;
+    max-width: 36rem;
     margin: 0 auto;
     padding: 0 1.5em 4em;
 
@@ -213,33 +213,38 @@
         margin-bottom: 1.5em;
     }
 
-    .article-list {
+    .recent-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
         display: grid;
-        row-gap: 1.5em;
+        row-gap: 0.2em;
     }
 
-    .article-block {
-        text-align: center;
+    .recent-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1em;
+        padding: 0.6em 0;
+        text-decoration: none;
+        color: var(--text-color);
+        border-bottom: 1px solid var(--border-color);
+        transition: color 0.2s ease;
 
-        &::after {
-            display: none;
+        &:hover {
+            color: var(--text-color-light);
         }
+    }
 
-        .title-link .heading {
-            padding-left: 0;
+    .recent-title {
+        text-align: left;
+    }
 
-            &::before {
-                display: none;
-            }
-        }
-
-        .article-summary {
-            padding-left: 0;
-            border-left: none;
-        }
-
-        .meta-line {
-            text-align: center;
-        }
+    .recent-date {
+        flex-shrink: 0;
+        font-size: 0.85em;
+        color: var(--text-color-light);
+        opacity: 0.8;
     }
 }
