@@ -20,19 +20,31 @@
           <img src="{{ get_url(path=config.extra.avatar) }}" alt="avatar">
         </div>
         {% endif %}
-        <div class="title">
-          <h3>{{ config.title }}</h3>
-          <div class="description">
-            <p>{{ config.description }}</p>
+        <div class="terminal-card">
+          <div class="terminal-bar">
+            <span class="t-dot t-red"></span>
+            <span class="t-dot t-yellow"></span>
+            <span class="t-dot t-green"></span>
+            <span class="t-title">mori@Myosotis: ~</span>
           </div>
-          {# --- Motto (between description and social links) --- #}
-          {% if config.extra.motto_mode and config.extra.motto_mode != "hide" %}
-            {% if config.extra.motto_mode == "single" and config.extra.motto %}
-            <p class="motto">{{ config.extra.motto }}</p>
-            {% elif config.extra.motto_mode == "multi" and config.extra.mottos %}
-            <p class="motto" data-mottos='{{ config.extra.mottos | json_encode | safe }}'></p>
+          <div class="terminal-body">
+            <p class="t-line"><span class="tp-user">mori</span><span class="tp-at">@</span><span class="tp-host">Myosotis</span><span class="tp-path">:~$</span> <span class="t-cmd">whoami</span></p>
+            <p class="t-line t-out">{{ config.title }}</p>
+            <p class="t-line"><span class="tp-user">mori</span><span class="tp-at">@</span><span class="tp-host">Myosotis</span><span class="tp-path">:~$</span> <span class="t-cmd">cat about.txt</span></p>
+            <p class="t-line t-out">{{ config.description }}</p>
+            {# --- Motto as typed command --- #}
+            {% if config.extra.motto_mode and config.extra.motto_mode != "hide" %}
+              <p class="t-line">
+                <span class="tp-user">mori</span><span class="tp-at">@</span><span class="tp-host">Myosotis</span><span class="tp-path">:~$</span>
+                {% if config.extra.motto_mode == "single" and config.extra.motto %}
+                <span class="motto">{{ config.extra.motto }}</span>
+                {% elif config.extra.motto_mode == "multi" and config.extra.mottos %}
+                <span class="motto" data-mottos='{{ config.extra.mottos | json_encode | safe }}'></span>
+                {% endif %}
+                <span class="terminal-cursor"></span>
+              </p>
             {% endif %}
-          {% endif %}
+          </div>
         </div>
       </div>
       <ul class="social-links">
