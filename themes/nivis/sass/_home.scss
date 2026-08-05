@@ -212,6 +212,14 @@
             overflow-wrap: break-word;
         }
 
+        .t-out {
+            color: var(--text-color-light);
+        }
+
+        .t-cmd {
+            color: var(--z-text);
+        }
+
         .tp-user, .tp-at {
             color: var(--z-string);
         }

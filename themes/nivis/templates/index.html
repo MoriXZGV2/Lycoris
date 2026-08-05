@@ -22,10 +22,12 @@
         {% endif %}
         <div class="terminal-card">
           <div class="terminal-body">
+            <p class="t-line"><span class="tp-user">Mori</span><span class="tp-at">@</span><span class="tp-host">Myosotis</span><span class="tp-path">:~$</span> <span class="t-cmd">whoami</span></p>
+            <p class="t-line t-out">Mori</p>
             {# --- Motto as typed command --- #}
             {% if config.extra.motto_mode and config.extra.motto_mode != "hide" %}
               <p class="t-line">
-                <span class="tp-user">mori</span><span class="tp-at">@</span><span class="tp-host">Myosotis</span><span class="tp-path">:~$</span>
+                <span class="tp-user">Mori</span><span class="tp-at">@</span><span class="tp-host">Myosotis</span><span class="tp-path">:~$</span>
                 {% if config.extra.motto_mode == "single" and config.extra.motto %}
                 <span class="motto">{{ config.extra.motto }}</span>
                 {% elif config.extra.motto_mode == "multi" and config.extra.mottos %}
