@@ -1,0 +1,7 @@
+[[groups]]
+name = "My Best Friends"
+items = [
+    { name = "Neisseria", url = "https://www.tiktok.com/@mantan0230", description = "Uy Mana Kado Yang Kau Janjikan Itu", avatar ="../images/Neisseria.jpg" },
+    { name = "Tokaro", url = "https://www.tiktok.com/@hunter_tmf", description = "Pencinta kucing", avatar ="../images/Tokaro.jpg" },
+]
+desc = "My Favorite Humans"

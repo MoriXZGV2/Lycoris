@@ -1,0 +1,42 @@
+# The URL the site will be built for
+base_url = "https://MoriXZGV2.github.io/Myosotis/"
+
+# Site title and description
+title = "Myosotis"
+description = "Catatan tentang hiruk-pikuk diriku, sebelum waktu menghapus eksistensiku."
+
+# Theme configuration
+theme = "nivis"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+# Generate feeds
+generate_feeds = true
+
+# Taxonomies
+taxonomies = [{ name = "tags", paginate_by = 5 }]
+
+[markdown]
+render_emoji = true
+bottom_footnotes = true
+github_alerts = true
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+
+[extra]
+# Theme-specific configuration
+main_section = "posts"
+math_display = "mathjax"
+avatar = "images/pfp.jpg"
+
+social_links = [
+    # Add your social media links here
+    { name = "github", url = "https://github.com/MoriXZGV2" },
+    { name = "youtube", url = "https://www.youtube.com/@MoriXZGV2"},
+    { name = "twitter", url = "https://x.com/MoriXZGV2" }    
+]
