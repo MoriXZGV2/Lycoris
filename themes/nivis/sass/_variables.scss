@@ -21,25 +21,25 @@
         --gutter-h-narrow: calc((100vw - 400px) / 3);
     }
 
-    /* Colors (Gruvbox) */
-    --text-color: light-dark(#3c3836, #ebdbb2);
-    --text-color-light: light-dark(#665c54, #bdae93);
-    --bg-color: light-dark(#fbf1c7, #282828);
-    --sidebar-bg: light-dark(rgba(251, 241, 199, 0.9), rgba(40, 40, 40, 0.9));
+    /* Colors (Gruvbox, hard dark) */
+    --text-color: light-dark(#3c3836, #fbf1c7);
+    --text-color-light: light-dark(#665c54, #d5c4a1);
+    --bg-color: light-dark(#fbf1c7, #1d2021);
+    --sidebar-bg: light-dark(rgba(251, 241, 199, 0.9), rgba(29, 32, 33, 0.9));
     --border-color: light-dark(#d5c4a1, #504945);
-    --code-bg: light-dark(#ebdbb2, #1d2021);
+    --code-bg: light-dark(#ebdbb2, #141617);
     --btn-bg: light-dark(#bdae93, #665c54);
     --btn-hover: light-dark(#a89984, #7c6f64);
     --shadow-color: light-dark(rgba(0,0,0,0.1), rgba(0,0,0,0.5));
-    --social-bg: light-dark(#ebdbb2, #3c3836);
+    --social-bg: light-dark(#ebdbb2, #282828);
     --social-border: light-dark(#d5c4a1, #504945);
     --social-hover-bg: light-dark(#d5c4a1, #504945);
     --pre-shadow: light-dark(0 0 30px -10px hsla(0, 0%, 70%, 1.0), 0 0 30px -10px rgba(0, 0, 0, 0.5));
-    --table-header-bg: light-dark(#ebdbb2, #504945);
-    --table-cell-bg: light-dark(#f2e5bc, #3c3836);
+    --table-header-bg: light-dark(#ebdbb2, #3c3836);
+    --table-cell-bg: light-dark(#f2e5bc, #282828);
 
     /* Syntax Highlighting (Gruvbox) */
-    --z-text: light-dark(#3c3836, #ebdbb2);
+    --z-text: light-dark(#3c3836, #fbf1c7);
     --z-comment: light-dark(#928374, #928374);
     --z-punctuation: light-dark(#504945, #a89984);
     --z-keyword: light-dark(#9d0006, #fb4934);
