@@ -196,14 +196,18 @@
         white-space: nowrap;
 
         .tp-user, .tp-at {
-            color: var(--z-entity);
-        }
-
-        .tp-host {
             color: var(--z-string);
         }
 
+        .tp-host {
+            color: var(--z-entity);
+        }
+
         .tp-path {
+            color: var(--z-type);
+        }
+
+        .tp-dollar {
             color: var(--z-text);
         }
 
