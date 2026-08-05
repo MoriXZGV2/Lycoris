@@ -1,12 +1,12 @@
-<div class="term-window" role="group" aria-label="terminal interaktif">
+<div class="term-window" role="group" aria-label="interactive terminal">
   <div class="term-bar">Mori@LycorisRadiata: ~</div>
-  <div class="term-screen" tabindex="0"></div>
+  <div class="term-screen"></div>
   <div class="term-input-row">
     <span class="term-prompt">[<span class="tp-user">Mori</span><span class="tp-at">@</span><span class="tp-host">LycorisRadiata</span> <span class="tp-path">~</span>]$</span>
-    <input type="text" class="term-input" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="perintah terminal" disabled />
+    <input type="text" class="term-input" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="terminal command" disabled />
   </div>
 </div>
-<p class="term-hint">Ketik <code>help</code>, lalu tekan <kbd>Enter</kbd>.</p>
+<p class="term-hint">Type <code>help</code>, then press <kbd>Enter</kbd>.</p>
 <script>
 (function () {
   'use strict';
@@ -18,8 +18,8 @@
 
   var files = {
     '~/Stress.md': 'Jujur, hari ini aku capek banget. Asli, rasanya udah lah, kayak gitu terus. Obatku cuma musikku, sama menulis blog.',
-    '~/Blog/motto.md': 'Amor fati. Cintai apa yang terjadi, termasuk hari ini.',
-    '~/Musik/relaksasi.mp3': 'relaksasi.mp3 | 3:33 | mainkan saat dunia terasa bising.'
+    '~/Blog/motto.md': 'Amor fati. Love whatever happens, including today.',
+    '~/Musik/relaksasi.mp3': 'relaksasi.mp3 | 3:33 | play this when the world gets too loud.'
   };
   var dirs = {
     '~': ['Blog', 'Musik', 'Stress.md'],
@@ -87,20 +87,20 @@
 
   var commands = {
     help: function () {
-      printOut('Perintah yang tersedia:\n' +
-        '  whoami        siapa kamu\n' +
-        '  pwd           direktori saat ini\n' +
-        '  ls [dir]      daftar isi direktori\n' +
-        '  cd <dir>      pindah direktori\n' +
-        '  cat <file>    baca isi file\n' +
-        '  touch <file>  buat file baru\n' +
-        '  rm <file>     hapus file\n' +
-        '  echo <teks>   ulangi teks\n' +
-        '  date          tanggal hari ini\n' +
-        '  motto         kutipan hari ini\n' +
-        '  neofetch      info sistem\n' +
-        '  clear         bersihkan layar\n' +
-        '  exit          keluar terminal');
+      printOut('Available commands:\n' +
+        '  whoami        who you are\n' +
+        '  pwd           current directory\n' +
+        '  ls [dir]      list directory contents\n' +
+        '  cd <dir>      change directory\n' +
+        '  cat <file>    read a file\n' +
+        '  touch <file>  create a new file\n' +
+        '  rm <file>     remove a file\n' +
+        '  echo <text>   repeat the text\n' +
+        '  date          current date\n' +
+        '  motto         a quote for today\n' +
+        '  neofetch      system info\n' +
+        '  clear         clear the screen\n' +
+        '  exit          leave the terminal');
     },
     whoami: function () { printOut('Mori'); },
     pwd: function () { printOut(cwd); },
@@ -121,7 +121,7 @@
       promptPath.textContent = cwd;
     },
     cat: function (args) {
-      if (!args.length) { printOut('cat: missing operand. Ketik cat <nama file>'); return; }
+      if (!args.length) { printOut('cat: missing operand. Usage: cat <file>'); return; }
       var t = normalize(args[0]);
       if (files[t] !== undefined) { printOut(files[t]); }
       else if (dirs[t]) { printOut('cat: ' + args[0] + ': Is a directory'); }
@@ -142,7 +142,7 @@
       var t = cwd + '/' + name;
       if (name === 'Stress.md' || t === '~/Stress.md') {
         printOut('rm: cannot remove ' + name + ': Permission denied', 'dim');
-        printOut('   Stress.md adalah file sistem yang penting. Maaf.');
+        printOut('   Stress.md is a protected system file. Sorry.');
         return;
       }
       var idx = dirs[cwd].indexOf(name);
@@ -154,13 +154,13 @@
     date: function () { printOut(new Date().toString()); },
     motto: function () { printOut(mottos[Math.floor(Math.random() * mottos.length)]); },
     clear: function () { screen.innerHTML = ''; },
-    exit: function () { printOut('Mau keluar? Kan masih ada cerita yang belum selesai.'); },
-    sudo: function () { printOut('Mori: sudo tidak ada di sini. Cukup jadi diri sendiri.'); },
+    exit: function () { printOut('Leaving already? There is still a story to tell.'); },
+    sudo: function () { printOut('Mori: sudo is not available here. Just be yourself.'); },
     neofetch: function () {
       printOut('Mori@LycorisRadiata\n' +
-        'OS: sebuah hati yang sedang berjalan\n' +
-        'Shell: jujur\n' +
-        'Uptime: 22 jam, dan tetap bertahan');
+        'OS: a heart that keeps going\n' +
+        'Shell: honest\n' +
+        'Uptime: 22 hours and still holding on');
     }
   };
 
@@ -200,9 +200,9 @@
 
   var boot = [
     { out: 'Lycoris Radiata 3.14 (tty1)' },
-    { out: '[ ok ] Memuat filesystem' },
-    { out: '[ ok ] Memulai musik-player' },
-    { out: '[ ok ] Memulai blogd' },
+    { out: '[ ok ] Mounting filesystems' },
+    { out: '[ ok ] Starting music-player' },
+    { out: '[ ok ] Starting blogd' },
     { out: '' },
     { cmd: 'whoami', out: 'Mori' },
     { cmd: 'touch Stress.md', out: null },
@@ -256,7 +256,11 @@
     }
   });
 
-  term.addEventListener('mousedown', function () { input.focus(); });
+  term.addEventListener('mousedown', function (e) {
+    if (e.target === input) { return; }
+    e.preventDefault();
+    input.focus();
+  });
 
   document.addEventListener('keydown', skipAll, true);
   document.addEventListener('mousedown', skipAll, true);
