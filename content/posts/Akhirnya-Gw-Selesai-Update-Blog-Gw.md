@@ -16,4 +16,4 @@ Ya sudah, sampai jumpa lagi guys, bye.
 
 {{ image(src="/images/1.jpg", alt="Foto Langit dan ada Mataharinya", caption="Foto Langit") }}
 
-{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}
+{{ player(design="4") }}

@@ -20,4 +20,4 @@ Mungkin besok saya akan membahas lagu terlebih dahulu, karena untuk membahas per
 
 Maafkan saya karena belum bisa menjadi manusia yang sempurna seperti yang diharapkan oleh lingkungan sosial.
 
-{{ player(track="leave.ogg", dur="4:13", durS="253.3") }}
+{{ player(track="leave.ogg", dur="4:13", durS="253.3", design="5") }}

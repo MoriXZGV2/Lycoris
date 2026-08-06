@@ -48,4 +48,4 @@ See you my friend.
 Sampai jumpa lagi di siklus selanjutnya.  
 Bye bye bye.
 
-{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}
+{{ player(design="6") }}

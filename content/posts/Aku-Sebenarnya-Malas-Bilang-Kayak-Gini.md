@@ -16,4 +16,4 @@ Tokaro: Wah kalo ini bisa di bilang sahabat sejati ku lah ibaratnya dia orangnya
 
 Yang pasti seburuk-buruknya hari yang ku jalanin selama mereka masih ada di samping ku aku baik-baik aja kok. Aku jujur bersyukur banget bisa punya sahabat kayak mereka aku harap persahabatan kita ini bertahan sampai kita tua.
 
-{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}
+{{ player(design="3") }}

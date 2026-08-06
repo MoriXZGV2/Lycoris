@@ -29,4 +29,4 @@ Sampai jumpa lagi. Aku yakin firasatku tidak salah.
 Maaf kalau selama kita bertemu aku ada salah, ya.
 
 
-{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}
+{{ player(design="1") }}

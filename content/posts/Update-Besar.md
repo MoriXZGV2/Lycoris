@@ -17,4 +17,4 @@ Oh iya, untuk game development sebenarnya aku sudah selesai setup project-nya da
 
 Mungkin hanya itu aja yang ingin aku sampaikan untuk hari ini.
 
-{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}
+{{ player(design="3") }}

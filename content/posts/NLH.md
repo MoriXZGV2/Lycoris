@@ -22,4 +22,4 @@ Kalau ada kesalahan dalam review ini mohon maaf, soalnya aku harus mencerna isi 
 
 **Oke guys, see you next time!**
 
-{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}
+{{ player(design="6") }}

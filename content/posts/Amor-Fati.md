@@ -20,5 +20,5 @@ Yah, aku harap di kehidupan selanjutnya aku nggak pilih sekolah ini. Fuck, I hat
 
 Dan juga aku kesal banget sih, di kelasku itu hampir semua orangnya brengsek. Yah udahlah, sekarang kayak aku itu menerima takdir banget. Amor Fati.
 
-{{ player(track="leave.ogg", dur="4:13", durS="253.3") }}
+{{ player(track="leave.ogg", dur="4:13", durS="253.3", design="1") }}
 

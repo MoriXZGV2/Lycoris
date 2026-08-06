@@ -16,4 +16,4 @@ Oh iya intinya gw update ini blog setiap hari minggu, kalo di tanya kapan upload
 
 Oh iya ini terakhir maaf ya guys gaya penulisan gw belum bisa rapi banget lagi berusaha buat pakai tanda baca sesuai yang gw bilang di blog sebelumnya.
 
-{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}
+{{ player(design="7") }}

@@ -24,4 +24,4 @@ Yang penting kita sering bertukar kabar. Itu membuatku termotivasi untuk terus m
 
 Nanti di masa depan kita tinggal bersama di rumah impian kita di Swiss, ya. Semoga kita berdua diberi umur yang panjang, amin, dan semoga kita selalu bersama selamanya.
 
-{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}
+{{ player(design="1") }}

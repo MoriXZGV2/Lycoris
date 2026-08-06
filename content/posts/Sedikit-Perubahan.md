@@ -18,4 +18,4 @@ Ya intinya gue bakalan update blog ini setiap hari kalo enggak ada kendala, dan 
 
 Sampai sini aja blognya karena gue mau ngerjain tugas dulu. Kalo udah selesai ngerjain tugasnya, nanti gue setup project gamenya, habis itu gue post di blog ini.
 
-{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}
+{{ player(design="5") }}
