@@ -7,7 +7,7 @@ description = "whoami"
 tags = ["Curhatan"]
 +++
 
-{% terminal() %}
+{% terminal(track="leave.ogg", dur="4:13", durS="253.3", trackDesc="play this when you want to leave it all behind.") %}
 --- 01-pagi.md
 Udah cape banget aku asli, punya teman kayak gini amat. Di samping kiri aku berisik minta ampun, di samping kanan aku agak ngeselin, dan juga orang itu ngeselin banget bangke. Besok apalagi? Capek banget aku asli, malas banget. Udah lah, pagi ini bad mood, tambah lagi orangnya brengsek banget. IDK, aku juga bingung. Kayak aku mau memamer blog aku doang, soalnya kayak teman kayak emotionless gitu ya. Mau memamer doang si, hehehehe. Ya alias, mau kasih tunjuk blog aku siapa tahu tertarik untuk membaca.
 --- 02-sekolah.md
