@@ -30,4 +30,4 @@ Yaudah, mungkin sampai sini dulu blog aku. Nulis sepanjang ini capek juga, loh.
 
 **Oke guys, see you next time!**
 
-{{ player() }}
+{{ player(track="leave.ogg", dur="4:13", durS="253.3") }}

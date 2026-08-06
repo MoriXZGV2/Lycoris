@@ -56,5 +56,5 @@ Sepertinya aku butuh teman, bukan cuma ngobrol sama diri sendiri seperti di mimp
 Aku juga ingin punya teman di luar sekolah, satu kelas sama aku, duduk bersama, bercengkerama, bahas topik yang kita mau.  
 Aku berharap ke depannya semuanya lebih baik.
 
-{{ player() }}
+{{ player(track="leave.ogg", dur="4:13", durS="253.3") }}
 

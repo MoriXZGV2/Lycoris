@@ -16,5 +16,5 @@ Intinya, lagu ini enak banget. Buat yang mau coba dengar shoegaze, gue rekomenda
 
 Oh iya, review ini murni opini pribadi gue setelah mendengarkan lagunya.
 
-{{ player() }}
+{{ player(track="leave.ogg", dur="4:13", durS="253.3") }}
 
