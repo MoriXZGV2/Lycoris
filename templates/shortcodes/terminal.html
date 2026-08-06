@@ -27,6 +27,15 @@
 {% set_global fnames = fnames | concat(with=[file]) %}
 {% set_global ftexts = ftexts | concat(with=[text]) %}
 {% endif %}
+{% set lsHtml = '<span class="t-dir">Blog</span>   <span class="t-dir">Musik</span>' %}
+{% for fname in fnames %}
+{% set_global lsHtml = lsHtml ~ '   ' %}
+{% if fname | ends_with(ending=".ogg") %}
+{% set_global lsHtml = lsHtml ~ '<span class="t-audio">' ~ fname ~ '</span>' %}
+{% else %}
+{% set_global lsHtml = lsHtml ~ '<span class="t-file">' ~ fname ~ '</span>' %}
+{% endif %}
+{% endfor %}
 <div class="term-window" role="group" aria-label="interactive terminal">
   <div class="term-bar">Mori@{{ host }}: ~</div>
   <div class="term-screen"></div>
@@ -130,6 +139,25 @@ var TRACKDESC = {{ trackDesc | json_encode | safe }};
     scroll();
   }
 
+  function printOutRaw(html, cls) {
+    if (html === null || html === undefined || html === '') { scroll(); return; }
+    var div = document.createElement('div');
+    div.className = 'term-out' + (cls ? ' ' + cls : '');
+    div.innerHTML = html;
+    screen.appendChild(div);
+    scroll();
+  }
+
+  function entryHtml(name) {
+    if (dirs[normalize(name)] !== undefined) {
+      return '<span class="t-dir">' + esc(name) + '</span>';
+    }
+    if (/\.ogg$/i.test(name)) {
+      return '<span class="t-audio">' + esc(name) + '</span>';
+    }
+    return '<span class="t-file">' + esc(name) + '</span>';
+  }
+
   function printCmdLine(cmd) {
     var div = document.createElement('div');
     div.className = 'term-out';
@@ -176,10 +204,14 @@ var TRACKDESC = {{ trackDesc | json_encode | safe }};
     pwd: function () { printOut(cwd); },
     ls: function (args) {
       var target = args.length ? normalize(args[0]) : cwd;
-      if (files[target] !== undefined) { printOut(target.split('/').pop()); return; }
+      if (files[target] !== undefined) { printOutRaw(entryHtml(target.split('/').pop())); return; }
       var list = dirs[target];
       if (!list) { printOut('ls: cannot access ' + args[0] + ': No such file or directory'); return; }
-      printOut(list.join('   '));
+      var html = [];
+      for (var i = 0; i < list.length; i++) {
+        html.push(entryHtml(list[i]));
+      }
+      printOutRaw(html.join('   '));
     },
     cd: function (args) {
       if (!args.length) { cwd = '~'; }
@@ -287,7 +319,7 @@ var TRACKDESC = {{ trackDesc | json_encode | safe }};
     { out: '[ ok ] Starting blogd' },
     { out: '' },
     { cmd: 'whoami', out: 'Mori' },
-    { cmd: 'ls', out: 'Blog/   Musik/   ' + {{ fnames | join(sep="   ") | json_encode | safe }} },
+    { cmd: 'ls', out: {{ lsHtml | json_encode | safe }}, html: true },
 {% for fname in fnames -%}
 {%- set ftext = ftexts[loop.index0] -%}
     { cmd: 'cat {{ fname }}', out: {{ ftext | json_encode | safe }} },
@@ -308,7 +340,9 @@ var TRACKDESC = {{ trackDesc | json_encode | safe }};
         div.appendChild(span);
         screen.appendChild(div);
         typing(span, step.cmd, 26, function () {
-          if (step.out !== null) { printOut(step.out); }
+          if (step.out !== null) {
+            if (step.html) { printOutRaw(step.out); } else { printOut(step.out); }
+          }
           setTimeout(next, 220);
         });
       } else {

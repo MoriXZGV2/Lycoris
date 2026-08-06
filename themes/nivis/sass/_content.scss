@@ -1528,6 +1528,19 @@ sup.footnote-reference {
         .tp-path {
             color: var(--z-type);
         }
+
+        .t-dir {
+            color: var(--z-entity);
+            font-weight: bold;
+        }
+
+        .t-file {
+            color: var(--z-string);
+        }
+
+        .t-audio {
+            color: var(--z-storage);
+        }
     }
 
     .term-input-row {

@@ -199,6 +199,13 @@
 
 
 
+
+
+
+
+
+
+
 <div class="term-window" role="group" aria-label="interactive terminal">
   <div class="term-bar">Mori@LycorisRadiata: ~</div>
   <div class="term-screen"></div>
@@ -295,6 +302,25 @@ var TRACKDESC = "a loop you want to break out of.";
     scroll();
   }
 
+  function printOutRaw(html, cls) {
+    if (html === null || html === undefined || html === '') { scroll(); return; }
+    var div = document.createElement('div');
+    div.className = 'term-out' + (cls ? ' ' + cls : '');
+    div.innerHTML = html;
+    screen.appendChild(div);
+    scroll();
+  }
+
+  function entryHtml(name) {
+    if (dirs[normalize(name)] !== undefined) {
+      return '<span class="t-dir">' + esc(name) + '</span>';
+    }
+    if (/\.ogg$/i.test(name)) {
+      return '<span class="t-audio">' + esc(name) + '</span>';
+    }
+    return '<span class="t-file">' + esc(name) + '</span>';
+  }
+
   function printCmdLine(cmd) {
     var div = document.createElement('div');
     div.className = 'term-out';
@@ -341,10 +367,14 @@ var TRACKDESC = "a loop you want to break out of.";
     pwd: function () { printOut(cwd); },
     ls: function (args) {
       var target = args.length ? normalize(args[0]) : cwd;
-      if (files[target] !== undefined) { printOut(target.split('/').pop()); return; }
+      if (files[target] !== undefined) { printOutRaw(entryHtml(target.split('/').pop())); return; }
       var list = dirs[target];
       if (!list) { printOut('ls: cannot access ' + args[0] + ': No such file or directory'); return; }
-      printOut(list.join('   '));
+      var html = [];
+      for (var i = 0; i < list.length; i++) {
+        html.push(entryHtml(list[i]));
+      }
+      printOutRaw(html.join('   '));
     },
     cd: function (args) {
       if (!args.length) { cwd = '~'; }
@@ -452,7 +482,7 @@ var TRACKDESC = "a loop you want to break out of.";
     { out: '[ ok ] Starting blogd' },
     { out: '' },
     { cmd: 'whoami', out: 'Mori' },
-    { cmd: 'ls', out: 'Blog/   Musik/   ' + "loop.md" },
+    { cmd: 'ls', out: "<span class=\"t-dir\">Blog</span>   <span class=\"t-dir\">Musik</span>   <span class=\"t-file\">loop.md</span>", html: true },
 { cmd: 'cat loop.md', out: "Aduh, siklus itu mulai lagi. Eternal return. Terkadang aku ingin berhenti saja, tapi aku ingat satu kalimat: amor fati. Eh, kayaknya habis post ini aku bahas hal lain, kayaknya seru deh." },
   ];
 
@@ -470,7 +500,9 @@ var TRACKDESC = "a loop you want to break out of.";
         div.appendChild(span);
         screen.appendChild(div);
         typing(span, step.cmd, 26, function () {
-          if (step.out !== null) { printOut(step.out); }
+          if (step.out !== null) {
+            if (step.html) { printOutRaw(step.out); } else { printOut(step.out); }
+          }
           setTimeout(next, 220);
         });
       } else {
