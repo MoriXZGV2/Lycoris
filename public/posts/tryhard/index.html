@@ -289,9 +289,25 @@
     }
   });
 
-  var ap = audio.play();
-  if (ap && ap.catch) { ap.catch(function () { updateMPState(); }); }
-  updateMPState();
+  function tryPlay() {
+    if (!audio.paused) { return; }
+    var ap = audio.play();
+    if (ap && ap.catch) { ap.catch(function () { updateMPState(); }); }
+    updateMPState();
+  }
+
+  tryPlay();
+  function onGesture() {
+    document.removeEventListener('pointerdown', onGesture);
+    document.removeEventListener('keydown', onGesture);
+    document.removeEventListener('touchstart', onGesture);
+    document.removeEventListener('scroll', onGesture);
+    if (audio.paused) { tryPlay(); }
+  }
+  document.addEventListener('pointerdown', onGesture);
+  document.addEventListener('keydown', onGesture);
+  document.addEventListener('touchstart', onGesture);
+  document.addEventListener('scroll', onGesture);
 
   mp.querySelector('.mp-track').addEventListener('click', function (e) {
     var r = this.getBoundingClientRect();
