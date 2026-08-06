@@ -289,6 +289,10 @@
     }
   });
 
+  var ap = audio.play();
+  if (ap && ap.catch) { ap.catch(function () { updateMPState(); }); }
+  updateMPState();
+
   mp.querySelector('.mp-track').addEventListener('click', function (e) {
     var r = this.getBoundingClientRect();
     var d = getDur();
