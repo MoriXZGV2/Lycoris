@@ -5,6 +5,7 @@
 {% set dur = dur | default(value="4:54") %}
 {% set durS = durS | default(value="294.5") %}
 {% set trackDesc = trackDesc | default(value="press play.") %}
+{% set show = show | default(value=0) | int %}
 {% if body %}
 {% set blocks = body | split(pat="--- ") %}
 {% else %}
@@ -321,8 +322,10 @@ var TRACKDESC = {{ trackDesc | json_encode | safe }};
     { cmd: 'whoami', out: 'Mori' },
     { cmd: 'ls', out: {{ lsHtml | json_encode | safe }}, html: true },
 {% for fname in fnames -%}
+{%- if show == 0 or loop.index <= show -%}
 {%- set ftext = ftexts[loop.index0] -%}
     { cmd: 'cat {{ fname }}', out: {{ ftext | json_encode | safe }} },
+{%- endif -%}
 {%- endfor %}
   ];
 
