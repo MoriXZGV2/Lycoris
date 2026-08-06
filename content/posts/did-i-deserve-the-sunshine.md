@@ -8,7 +8,7 @@ description = "Janji sama aku, ya, untuk terus melanjutkan hidup. Jangan tinggal
 tags = ["Curhatan", "Relationship"]
 +++
 
-{{ player(design="1") }}
+{{ player(track="I_Believe_in_Anything.ogg", dur="4:36", durS="276.6", design="1") }}
 
 
 Swiss dan Jepang, bukankah itu tempat yang ingin kita kunjungi, kan? Aku sudah tahu jawabanmu, pasti kamu jawab iya. Dan juga kita ingin kabur dari negara yang penuh dengan orang-orang hipokrit, dan pemerintahnya juga sama munafiknya dengan janji-janji palsunya.
