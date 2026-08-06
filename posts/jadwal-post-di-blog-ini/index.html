@@ -194,7 +194,8 @@
 
 
 
-<div class="mp-window mp-d7" role="group" aria-label="media player">
+
+<div class="mp-window mp-d7" role="group" aria-label="media player" data-autoplay="true">
   <div class="mp-bar">
     <span class="mp-ico">&gt;&gt;</span>
     <span class="mp-title">relaksasi.ogg</span>
@@ -286,6 +287,8 @@
     }
   });
 
+  var autoplayOn = mp.dataset.autoplay !== 'false';
+
   function tryPlay() {
     if (!audio.paused) { return; }
     var ap = audio.play();
@@ -293,18 +296,20 @@
     updateMPState();
   }
 
-  tryPlay();
-  function onGesture() {
-    document.removeEventListener('pointerdown', onGesture);
-    document.removeEventListener('keydown', onGesture);
-    document.removeEventListener('touchstart', onGesture);
-    document.removeEventListener('scroll', onGesture);
-    if (audio.paused) { tryPlay(); }
+  if (autoplayOn) {
+    tryPlay();
+    function onGesture() {
+      document.removeEventListener('pointerdown', onGesture);
+      document.removeEventListener('keydown', onGesture);
+      document.removeEventListener('touchstart', onGesture);
+      document.removeEventListener('scroll', onGesture);
+      if (audio.paused) { tryPlay(); }
+    }
+    document.addEventListener('pointerdown', onGesture);
+    document.addEventListener('keydown', onGesture);
+    document.addEventListener('touchstart', onGesture);
+    document.addEventListener('scroll', onGesture);
   }
-  document.addEventListener('pointerdown', onGesture);
-  document.addEventListener('keydown', onGesture);
-  document.addEventListener('touchstart', onGesture);
-  document.addEventListener('scroll', onGesture);
 
   mp.querySelector('.mp-track').addEventListener('click', function (e) {
     var r = this.getBoundingClientRect();
