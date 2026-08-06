@@ -8,7 +8,7 @@ description = "Bumi Pasundan lahir ketika Tuhan sedang tersenyum."
 tags = ["Curhatan", "Relationship"]
 +++
 
-{{ player(design="1") }}
+{{ player(track="Dream_Sweet_in_Sea_Major.ogg", dur="7:00", durS="420.0", design="1") }}
 
 
 Di antara berita-berita politik yang tersebar di media, jujur sudah cukup membuatku ingin mencabut kewarganegaraanku sebagai orang Indonesia. Rasanya yang diurus cuma Pulau Jawa saja, sedangkan pulau-pulau lain seperti dianaktirikan, apalagi Papua, bahkan seperti anak pungut hitungannya.
