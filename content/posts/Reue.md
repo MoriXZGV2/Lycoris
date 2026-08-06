@@ -19,3 +19,5 @@ Saya tidak ingin menjadi orang yang jahat atau menjadi penjahat dalam cerita hid
 Mungkin besok saya akan membahas lagu terlebih dahulu, karena untuk membahas perkembangan game saya masih belum memiliki aset yang cukup.
 
 Maafkan saya karena belum bisa menjadi manusia yang sempurna seperti yang diharapkan oleh lingkungan sosial.
+
+{{ player() }}

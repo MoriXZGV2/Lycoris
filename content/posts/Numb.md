@@ -29,3 +29,5 @@ Tapi rencananya habis Ramadan ini aku mau belajar gambar. Panas sih, tapi aku ma
 Yaudah, mungkin sampai sini dulu blog aku. Nulis sepanjang ini capek juga, loh.
 
 **Oke guys, see you next time!**
+
+{{ player() }}
