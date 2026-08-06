@@ -21,3 +21,5 @@ Masalah di sekolah ini belum pernah aku ceritakan ke siapa pun, kecuali beberapa
 Aku berharap kehidupan sosial aku bisa baik-baik saja tanpa masalah seperti ini. Kadang aku sampai susah tidur karena teringat kejadian dulu, waktu SD dan SMP. Itu membuat aku lebih sulit cari teman baru. Bahkan aku sekarang merasa lebih nyaman punya sedikit teman. Menurut orang lain mungkin aku orang nolep, tapi menurut aku punya sedikit teman itu lebih baik daripada punya banyak teman yang tidak tulus.
 
 Waktu SMP memang banyak pahitnya, tapi aku juga pernah punya pengalaman yang baik. Aku punya dua sahabat terbaik yang masih dekat sampai sekarang. Setidaknya kalau hari-hariku buruk, selama mereka masih ada dalam hidupku, aku akan baik-baik saja.
+
+{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}

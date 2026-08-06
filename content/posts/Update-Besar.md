@@ -16,3 +16,5 @@ Sebenarnya aku mau bikin web dari nol, cuma kalau dari nol makan waktu banyak. M
 Oh iya, untuk game development sebenarnya aku sudah selesai setup project-nya dan ada fotonya juga. Cuman karena tema ini aku enggak bisa pakai foto itu, jadi hari ini aku fokus ganti tema dulu supaya web-nya makin bagus.
 
 Mungkin hanya itu aja yang ingin aku sampaikan untuk hari ini.
+
+{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}

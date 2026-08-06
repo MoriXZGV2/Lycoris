@@ -23,3 +23,5 @@ Tapi setidaknya minggu ini pikiranku tenang. Selama ujian dan seterusnya semuany
 Yang penting kita sering bertukar kabar. Itu membuatku termotivasi untuk terus melanjutkan hidup. Apakah itu benar? Jelas iya. Makanya aku benar-benar berterima kasih padamu karena telah hadir dalam kehidupanku.
 
 Nanti di masa depan kita tinggal bersama di rumah impian kita di Swiss, ya. Semoga kita berdua diberi umur yang panjang, amin, dan semoga kita selalu bersama selamanya.
+
+{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}

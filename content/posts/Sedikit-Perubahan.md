@@ -17,3 +17,5 @@ Bang, kenapa belajar gambar dan 3D modelling? Ya karena buat bikin game lah, dan
 Ya intinya gue bakalan update blog ini setiap hari kalo enggak ada kendala, dan juga nambahin topik seperti gue bakalan update tentang development game gue, belajar gambar dan 3D modelling.
 
 Sampai sini aja blognya karena gue mau ngerjain tugas dulu. Kalo udah selesai ngerjain tugasnya, nanti gue setup project gamenya, habis itu gue post di blog ini.
+
+{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}

@@ -15,3 +15,5 @@ Baju seragam gw aja belum dapat dari awal masuk sekolah sampai sekarang egak tau
 Oh iya intinya gw update ini blog setiap hari minggu, kalo di tanya kapan upload video youtubenya mungkin minggu depan sih soalnya gw belum setup softwarenya lagi. Yealah malah yapping gw disini.
 
 Oh iya ini terakhir maaf ya guys gaya penulisan gw belum bisa rapi banget lagi berusaha buat pakai tanda baca sesuai yang gw bilang di blog sebelumnya.
+
+{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}

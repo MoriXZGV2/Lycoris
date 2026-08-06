@@ -15,3 +15,5 @@ Neisseria: kadang-kadang aku suka curhat aja sih sama dia walaupun aku waktu cur
 Tokaro: Wah kalo ini bisa di bilang sahabat sejati ku lah ibaratnya dia orangnya baik banget sama ku rasanya beruntung punya sahabat kayak dia, kayak belikan aku game, kasih camilan, dan kalo lagi berdua itu kita sering cerita masalah kehidupan kadang juga aku curhat sama dia pokoknya Tokaro itu orang paling baik di dunia yang pernah kutemuin namun sayang kita beda sekolahan aku harap bisa ngobrol terus kayak waktu smp, dulu aku nempel banget sama Tokaro kayak ke kantin itu kita suka bareng-bareng, ngobrol di depan kelas juga, dan pulang bareng karena rumah kita itu hitungannya dekat banget kalo naik motor egak sampai 10 menit perjalanan lah.
 
 Yang pasti seburuk-buruknya hari yang ku jalanin selama mereka masih ada di samping ku aku baik-baik aja kok. Aku jujur bersyukur banget bisa punya sahabat kayak mereka aku harap persahabatan kita ini bertahan sampai kita tua.
+
+{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}

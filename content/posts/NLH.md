@@ -21,3 +21,5 @@ Hal yang paling nggak aku suka dari MCnya ini adalah kebiasaan jadi badut itu. K
 Kalau ada kesalahan dalam review ini mohon maaf, soalnya aku harus mencerna isi bukunya dua kali karena aku baca [NO LONGER HUMAN](https://www.gramedia.com/products/no-longer-human-norris-classics) versi terjemahan bahasa Inggris. Kadang ada kalimat yang susah dipahami, tapi kesimpulannya buku ini bagus banget buat dibaca, terutama kalau kalian suka sastra Jepang. Segitu dulu review buku kali ini dari aku.
 
 **Oke guys, see you next time!**
+
+{{ player(track="relaksasi.ogg", dur="4:54", durS="294.5") }}
