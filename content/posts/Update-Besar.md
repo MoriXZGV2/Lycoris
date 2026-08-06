@@ -8,6 +8,9 @@ description = "Update website dengan tema baru dan dukungan foto"
 tags = ["Information", "Announcement"]
 +++
 
+{{ player(design="3") }}
+
+
 
 Okay, untuk soal game development, untuk hari ini enggak bisa dilakukan karena aku bakalan robak website aku dulu alias ganti tampilan. Iya, sebenarnya aku mau pakai foto aku di website, tapi tema yang aku pakai sekarang ini enggak bisa pakai foto, jadi aku bakalan update website ini besar-besaran.
 
@@ -16,5 +19,3 @@ Sebenarnya aku mau bikin web dari nol, cuma kalau dari nol makan waktu banyak. M
 Oh iya, untuk game development sebenarnya aku sudah selesai setup project-nya dan ada fotonya juga. Cuman karena tema ini aku enggak bisa pakai foto itu, jadi hari ini aku fokus ganti tema dulu supaya web-nya makin bagus.
 
 Mungkin hanya itu aja yang ingin aku sampaikan untuk hari ini.
-
-{{ player(design="3") }}

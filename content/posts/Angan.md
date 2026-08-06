@@ -8,6 +8,9 @@ description = "Keinginanku sederhana: hanya ingin diterima oleh orang-orang di s
 tags = ["Imagination", "Curhatan"]
 +++
 
+{{ player(track="leave.ogg", dur="4:13", durS="253.3", design="2") }}
+
+
 Percakapan antara seseorang:
 
 Mori: Bro, kamu tau gak? Kadang-kadang aku suka ngelamun dan berhayal.  
@@ -55,6 +58,3 @@ Aku terbangun. Yang bisa aku ingat cuma dua nama orang, yaitu Zm dan Mori.
 Sepertinya aku butuh teman, bukan cuma ngobrol sama diri sendiri seperti di mimpi tadi.  
 Aku juga ingin punya teman di luar sekolah, satu kelas sama aku, duduk bersama, bercengkerama, bahas topik yang kita mau.  
 Aku berharap ke depannya semuanya lebih baik.
-
-{{ player(track="leave.ogg", dur="4:13", durS="253.3", design="2") }}
-

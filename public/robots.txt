@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: http://localhost:8899/sitemap.xml
+Sitemap: https://blog.morixhikari.my.id/sitemap.xml

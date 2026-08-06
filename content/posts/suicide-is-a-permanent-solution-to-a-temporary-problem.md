@@ -8,6 +8,9 @@ description = "Cerita tentang hubungan, kehidupan sosial, rasa lelah menjadi dir
 tags = ["Curhatan"]
 +++
 
+{{ player(design="6") }}
+
+
 > [!NOTE]
 > My life was nothing but a series of shame  
 > Osamu Dazai - NO LONGER HUMAN
@@ -47,5 +50,3 @@ Mungkin post kali ini sampai di sini dulu karena aku juga pengen istirahat biar 
 See you my friend.  
 Sampai jumpa lagi di siklus selanjutnya.  
 Bye bye bye.
-
-{{ player(design="6") }}

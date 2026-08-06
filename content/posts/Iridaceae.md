@@ -8,6 +8,9 @@ description = "Bumi Pasundan lahir ketika Tuhan sedang tersenyum."
 tags = ["Curhatan", "Relationship"]
 +++
 
+{{ player(design="1") }}
+
+
 Di antara berita-berita politik yang tersebar di media, jujur sudah cukup membuatku ingin mencabut kewarganegaraanku sebagai orang Indonesia. Rasanya yang diurus cuma Pulau Jawa saja, sedangkan pulau-pulau lain seperti dianaktirikan, apalagi Papua, bahkan seperti anak pungut hitungannya.
 
 Tetapi, ada satu kota yang membuatku ingin tetap tinggal di bumi Indonesia yang penuh akan fauna dan floranya ini, yaitu Kota Bandung. Kata *indah* sendiri rasanya tidak cukup untuk menggambarkan kota ini. Menurutku, kota ini terlalu indah.
@@ -27,6 +30,3 @@ Oh iya, terakhir. Bumi Pasundan lahir saat Tuhan sedang tersenyum, dan di bumi P
 Sampai jumpa lagi. Aku yakin firasatku tidak salah.
 
 Maaf kalau selama kita bertemu aku ada salah, ya.
-
-
-{{ player(design="1") }}

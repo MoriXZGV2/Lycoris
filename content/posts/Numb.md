@@ -8,6 +8,9 @@ description = "Titik di mana rasa sakit udah nggak kerasa, karena nggak ada lagi
 tags = ["Relationship", "Curhatan", "Hope", "Information", "Announcement"]
 +++
 
+{{ player(track="leave.ogg", dur="4:13", durS="253.3", design="3") }}
+
+
 Masalah hidup aku cuma di situ-situ aja, kayak cerita klise yang diceritain berkali-kali sampai muak mendengarnya. Menurut aku, lebih baik aku nggak melakukan apapun yang berkaitan sama sosial karena setiap kenal sama orang baru, ada aja masalahnya. Bahkan teman terdekat aku dulu pun pernah punya masalah sama aku. Tapi ya bodoamat, sekarang kita udah berteman layaknya saudara kandung. Kadang memang agak nyebelin, tapi selama dia baik sama aku, nggak aku peduliin.
 
 Selain itu, aku juga punya satu sahabat yang dari awal kenal nggak pernah ada drama sama sekali, kita udah kayak saudara banget. Lucu juga sih, yang aku ceritain di blog ini cuma dua orang ini, seolah mereka yang nulis blog ini. Sebenarnya agak miris juga sih, aku cuma punya dua orang yang betul-betul aku anggap teman, tapi dua orang ini emang yang paling dekat sama aku.
@@ -29,5 +32,3 @@ Tapi rencananya habis Ramadan ini aku mau belajar gambar. Panas sih, tapi aku ma
 Yaudah, mungkin sampai sini dulu blog aku. Nulis sepanjang ini capek juga, loh.
 
 **Oke guys, see you next time!**
-
-{{ player(track="leave.ogg", dur="4:13", durS="253.3", design="3") }}

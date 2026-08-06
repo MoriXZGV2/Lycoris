@@ -8,6 +8,9 @@ description = "Dari bangku SD sampai SMK, masalah yang terus menghampiriku hanya
 tags = ["Curhatan", "Hope", "Relationship"]
 +++
 
+{{ player(design="4") }}
+
+
 Makin hari kondisi mental aku makin berat. Sekarang, setiap kali aku dapat sesuatu yang baik, aku malah merasa itu semuanya salah. Tadi aku diajak main sama teman dan teleponan panjang banget, tapi aku cuma bisa diam karena aku bingung dan tidak nyaman.
 
 Aku mulai bertanya-tanya apakah aku perlu pergi ke psikiater. Masalahku bukan karena orang baru yang aku kenal, karena mereka tidak ada salahnya. Orang-orang di kelasku sebenarnya baik kalau dipikir-pikir, tapi aku merasa mereka menjauh dariku. Padahal kenyataannya tidak seperti itu.
@@ -21,5 +24,3 @@ Masalah di sekolah ini belum pernah aku ceritakan ke siapa pun, kecuali beberapa
 Aku berharap kehidupan sosial aku bisa baik-baik saja tanpa masalah seperti ini. Kadang aku sampai susah tidur karena teringat kejadian dulu, waktu SD dan SMP. Itu membuat aku lebih sulit cari teman baru. Bahkan aku sekarang merasa lebih nyaman punya sedikit teman. Menurut orang lain mungkin aku orang nolep, tapi menurut aku punya sedikit teman itu lebih baik daripada punya banyak teman yang tidak tulus.
 
 Waktu SMP memang banyak pahitnya, tapi aku juga pernah punya pengalaman yang baik. Aku punya dua sahabat terbaik yang masih dekat sampai sekarang. Setidaknya kalau hari-hariku buruk, selama mereka masih ada dalam hidupku, aku akan baik-baik saja.
-
-{{ player(design="4") }}

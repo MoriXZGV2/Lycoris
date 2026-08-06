@@ -7,6 +7,9 @@ description = "Lima Minggu"
 tags = ["Literature", "Story", "Imagination"]
 +++
 
+{{ player(design="2") }}
+
+
 365 hari telah terlalui, dan selama itu aku menunggu kesembuhan dirinya dari penyakit yang mematikan. Aku ingin sekali orang yang aku sayangi bisa sembuh, dan aku harap 3 bulan lagi dia benar-benar pulih dari penyakitnya.
 
 Seperti biasa, aku pergi ke rumah sakit untuk menjenguknya. Sesampainya di ruangannya, aku terkejut dengan apa yang aku lihat. Yang biasanya aku melihat dirinya terbaring lemas di ranjang rumah sakit, kini dia bisa beranjak dari ranjang dengan sendirinya. Aku melihat dia sedang melakukan senam kecil-kecilan, lalu dia berkata, "Ah, hari yang indah. Sepertinya Tuhan mendengar doaku." Aku menangis terharu melihat orang yang aku sayangi akhirnya sembuh. Dengan cepat aku memeluknya dengan erat, sontak dia terkejut dengan kehadiranku. Aku sangat gembira melihat dirinya bersemangat dengan senyumnya yang membinar-binar, yang membuat mataku bersinar kembali.
@@ -58,5 +61,3 @@ Semenjak itu aku diselimuti rasa sedih paling dalam, namun semuanya perlahan sir
 ---
 
 *Memento Mori.*
-
-{{ player(design="2") }}

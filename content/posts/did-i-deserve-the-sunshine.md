@@ -8,6 +8,9 @@ description = "Janji sama aku, ya, untuk terus melanjutkan hidup. Jangan tinggal
 tags = ["Curhatan", "Relationship"]
 +++
 
+{{ player(design="1") }}
+
+
 Swiss dan Jepang, bukankah itu tempat yang ingin kita kunjungi, kan? Aku sudah tahu jawabanmu, pasti kamu jawab iya. Dan juga kita ingin kabur dari negara yang penuh dengan orang-orang hipokrit, dan pemerintahnya juga sama munafiknya dengan janji-janji palsunya.
 
 Kadang aku iri sekali melihat negara seperti yang kusebut tadi. Setidaknya, selama tinggal di negara ini, aku ditemani satu orang yang membuat hidupku jauh lebih baik.
@@ -23,5 +26,3 @@ Tapi setidaknya minggu ini pikiranku tenang. Selama ujian dan seterusnya semuany
 Yang penting kita sering bertukar kabar. Itu membuatku termotivasi untuk terus melanjutkan hidup. Apakah itu benar? Jelas iya. Makanya aku benar-benar berterima kasih padamu karena telah hadir dalam kehidupanku.
 
 Nanti di masa depan kita tinggal bersama di rumah impian kita di Swiss, ya. Semoga kita berdua diberi umur yang panjang, amin, dan semoga kita selalu bersama selamanya.
-
-{{ player(design="1") }}

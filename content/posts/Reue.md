@@ -8,6 +8,9 @@ description = "Tentang tugas, kelas, dan janji yang belum ditepati"
 tags = ["Announcement", "Information", "Curhatan", "Relationship"]
 +++
 
+{{ player(track="leave.ogg", dur="4:13", durS="253.3", design="5") }}
+
+
 Belakangan ini saya tidak memposting apa pun di blog karena banyak tugas yang menumpuk. Selain itu, saya juga sedang berusaha bertahan di kelas yang terasa seperti tidak menginginkan kehadiran saya sebagai manusia. Kadang saya berpikir, mengapa saya merasa berbeda dari yang lain? Mengapa mereka bisa memiliki banyak teman, sedangkan saya di kelas justru merasa dijauhi? Terkadang saya juga merasa hanya dimanfaatkan oleh beberapa orang.
 
 Meski begitu, masih ada satu atau dua orang yang menghargai saya, dan menurut saya itu sudah cukup. Namun jauh di dalam hati, saya hanya memiliki satu keinginan, yaitu menjadi manusia yang normal dan mudah mendapatkan teman. Saya sering menganggap diri saya abnormal, karena jika saya normal, mungkin saya sudah memiliki banyak teman sampai sekarang.
@@ -19,5 +22,3 @@ Saya tidak ingin menjadi orang yang jahat atau menjadi penjahat dalam cerita hid
 Mungkin besok saya akan membahas lagu terlebih dahulu, karena untuk membahas perkembangan game saya masih belum memiliki aset yang cukup.
 
 Maafkan saya karena belum bisa menjadi manusia yang sempurna seperti yang diharapkan oleh lingkungan sosial.
-
-{{ player(track="leave.ogg", dur="4:13", durS="253.3", design="5") }}

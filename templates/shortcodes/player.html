@@ -3,7 +3,7 @@
 {% set durS = durS | default(value="294.5") %}
 {% set design = design | default(value="1") %}
 {% set dcls = 'mp-d' ~ design %}
-<div class="mp-window fp {{ dcls }}" role="group" aria-label="media player">
+<div class="mp-window {{ dcls }}" role="group" aria-label="media player">
   <div class="mp-bar">
     <span class="mp-ico">&gt;&gt;</span>
     <span class="mp-title">{{ track }}</span>

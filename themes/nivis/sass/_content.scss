@@ -1727,25 +1727,6 @@ sup.footnote-reference {
     }
 }
 
-/* Floating media player (non-terminal posts) */
-.mp-window.fp {
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
-    z-index: 950;
-    width: min(320px, calc(100vw - 32px));
-    margin: 0;
-    font-size: 1rem;
-
-    .mp-bar {
-        padding: 0.35em 0.75em;
-    }
-
-    @media screen and (max-width: 640px) {
-        font-size: 0.92rem;
-    }
-}
-
 /* Design variants (each works in both light and dark) */
 .mp-window.mp-d2 {
     border: 5px double var(--border-color);

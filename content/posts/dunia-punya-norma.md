@@ -8,6 +8,9 @@ description = "Sebuah curahan hati tentang cinta, penerimaan, dan harapan untuk 
 tags = ["Curhatan", "Relationship"]
 +++
 
+{{ player(design="7") }}
+
+
 Terkadang capek harus mengikuti hal-hal yang tidak kita inginkan. Kadang juga kita dipaksa oleh norma yang harus diikuti. Kalau tidak, kita bisa dianggap sebagai musuh masyarakat.
 
 Jujur, aku punya perasaan sama seseorang. Ya, kami sama-sama saling suka, dan ya, kami pacaran. Cuma terkadang aku berpikir satu hal: apakah kami masih diterima di masyarakat? Atau paling sederhana saja, apakah kami masih bisa masuk surga?
@@ -23,6 +26,3 @@ Ya, aku tahu kalau dalam agama juga ada pandangan tersendiri mengenai hal ini. J
 Walaupun di mana pun kita berada, meski di bumi Indonesia kita tidak diterima, aku akan tetap menerimamu apa adanya, kekasihku. Aku mencintaimu apa adanya tanpa memandang fisik. Aku murni mencintaimu, wahai kekasihku.
 
 **Teruntuk kekasih ancaman nonmiliterku.**
-
-
-{{ player(design="7") }}

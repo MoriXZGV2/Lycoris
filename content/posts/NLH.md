@@ -7,6 +7,9 @@ description = "Halo yall gue bahas satu bab aja dulu karena belum habis aku baca
 tags = ["Literature", "Review"]
 +++
 
+{{ player(design="6") }}
+
+
 > [!NOTE]
 > Review ini berdasarkan opini pribadi dan apa yang aku rasakan saat membaca bukunya.
 
@@ -21,5 +24,3 @@ Hal yang paling nggak aku suka dari MCnya ini adalah kebiasaan jadi badut itu. K
 Kalau ada kesalahan dalam review ini mohon maaf, soalnya aku harus mencerna isi bukunya dua kali karena aku baca [NO LONGER HUMAN](https://www.gramedia.com/products/no-longer-human-norris-classics) versi terjemahan bahasa Inggris. Kadang ada kalimat yang susah dipahami, tapi kesimpulannya buku ini bagus banget buat dibaca, terutama kalau kalian suka sastra Jepang. Segitu dulu review buku kali ini dari aku.
 
 **Oke guys, see you next time!**
-
-{{ player(design="6") }}
