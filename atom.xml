@@ -17,6 +17,15 @@
 		
 	</entry>
 	<entry xml:lang="en">
+		<title>[stranger@LycorisRadiata ~]$ nano curhat.md</title>
+		<published>2026-08-07T00:00:00+00:00</published>
+		<updated>2026-08-07T00:00:00+00:00</updated>
+		<link href="https://blog.morixhikari.my.id/posts/stranger/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/stranger/</id>
+		<summary>Aku nemu blog ini, terus aku nulis diam-diam. Maaf, ya.</summary>
+		
+	</entry>
+	<entry xml:lang="en">
 		<title>[mori@LycorisRadiata ~]$ touch loop.md</title>
 		<published>2026-08-06T00:00:00+00:00</published>
 		<updated>2026-08-06T00:00:00+00:00</updated>
