@@ -7,8 +7,6 @@ description = "Anomaly detected in sector 7."
 tags = ["Rahasia", "Base64"]
 +++
 
-{{ player(track="static.ogg", dur="0:30", durS="30.0", design="3") }}
-
 {% terminal(file="access.log", track="relaksasi.ogg", dur="4:54", durS="294.5", trackDesc="buat kamu yang lagi ngerasa sendiri.") %}
 --- access.log
 KysrCnRpdGxlID0gIllZOWtaU0JwY3lCdWIzUWdZU0JqY21sdFpRPT0iCmRhdGUgPSAyMDI2LTA4LTA3CmRyYWZ0ID0gZmFsc2UKZGVzY3JpcHRpb24gPSAiU0dWc2JHOGdabkp2YlNCMGFHVWdkbTlwWkM0PSIKW3RheG9ub21pZXNdCnRhZ3MgPSBbIlJhaGFzaWEiLCAiQmFzZTY0Il0KKysKClQgYSBzZWNyZXQgaGlkZGVuIGluIHBsYWluIHNpZ2h0LiBUaGUgcmVhbCBtZXNzYWdlIGlzIG5vdCBoZXJlLiBZb3UgbXVzdCBsb29rIGRlZXBlci4gVGhlIHVybCB5b3Ugc2VlayBpcyBhIGxpZS4gVGhlIHRydXRoIGlzIGluIHRoZSBpbWFnZS4gVHJ5IGRlY29kaW5nIHRoZSBzdGVnby4gSWYgeW91IGNhbiByZWFkIHRoaXMsIHlvdSBhbHJlYWR5IGtub3cgdGhlIHRyaWNrLiBUaGUgbWVzc2FnZSBpcyA6IGh0dHBzOi8vY3J5cHRpaS5jb20vcGlwZXMvY2Flc2FyLWNpcGhlci8=
@@ -16,5 +14,7 @@ KysrCnRpdGxlID0gIllZOWtaU0JwY3lCdWIzUWdZU0JqY21sdFpRPT0iCmRhdGUgPSAyMDI2LTA4LTA3
 Base64 content loaded. Decode to reveal the hidden transmission.
 Stego image embedded: udang_stego.webp
 {% end %}
+
+{{ player(track="static.ogg", dur="0:30", durS="30.0", design="3") }}
 
 ![Stego Image](/images/udang_stego.webp)
