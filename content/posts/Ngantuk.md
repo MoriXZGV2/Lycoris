@@ -10,12 +10,12 @@ tags = ["Curhatan", "Sleepy"]
 {{ terminal(file="loop.md", track="mu.ogg", dur="2:38", durS="158.4", trackDesc="a loop you want to break out of.") }}
 
 --- ngantuk.md
-intinya aku ngantuk
+Intinya, aku ngantuk.
 --- sleep.md
 zzzzz.
 --- kepala.md
-ngantuk pengen tidur 
+Ngantuk, pengen tidur.
 --- lagu.md
-kalian dengari lagu aja yah di post baru ku ini btw dan yap aku juga laqgi gak sehat btw.
+Kalian dengerin lagu aja ya di post baru aku ini. Oh iya, aku juga lagi gak sehat, btw.
 --- penutupan.md
-selamat tidur untuk diri ku.
+Selamat tidur untuk diriku.
