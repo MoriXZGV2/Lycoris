@@ -6,6 +6,7 @@
 {% set durS = durS | default(value="294.5") %}
 {% set trackDesc = trackDesc | default(value="press play.") %}
 {% set show = show | default(value=0) | int %}
+{% set autoplay = autoplay | default(value="true") %}
 {% if body %}
 {% set blocks = body | split(pat="--- ") %}
 {% else %}
@@ -45,7 +46,7 @@
     <input type="text" class="term-input" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="terminal command" disabled />
   </div>
 </div>
-<div class="mp-window" role="group" aria-label="media player">
+<div class="mp-window" role="group" aria-label="media player" data-autoplay="{{ autoplay }}">
   <div class="mp-bar">
     <span class="mp-ico">&gt;&gt;</span>
     <span class="mp-title">{{ track }}</span>
@@ -429,6 +430,30 @@ var TRACKDESC = {{ trackDesc | json_encode | safe }};
       mpTime.textContent = fmtTime(audio.currentTime) + ' / ' + fmtTime(d);
     }
   });
+
+  var autoplayOn = mp.dataset.autoplay !== 'false';
+
+  function tryPlay() {
+    if (!audio.paused) { return; }
+    var p = audio.play();
+    if (p && p.catch) { p.catch(function () { updateMPState(); }); }
+    updateMPState();
+  }
+
+  if (autoplayOn) {
+    tryPlay();
+    function onGesture() {
+      document.removeEventListener('pointerdown', onGesture);
+      document.removeEventListener('keydown', onGesture);
+      document.removeEventListener('touchstart', onGesture);
+      document.removeEventListener('scroll', onGesture);
+      if (audio.paused) { tryPlay(); }
+    }
+    document.addEventListener('pointerdown', onGesture);
+    document.addEventListener('keydown', onGesture);
+    document.addEventListener('touchstart', onGesture);
+    document.addEventListener('scroll', onGesture);
+  }
 
   mp.querySelector('.mp-track').addEventListener('click', function (e) {
     var r = this.getBoundingClientRect();

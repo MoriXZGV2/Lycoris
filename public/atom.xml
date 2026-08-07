@@ -5,8 +5,17 @@
 	<link href="https://blog.morixhikari.my.id/atom.xml" rel="self" type="application/atom+xml"/>
 	<link href="https://blog.morixhikari.my.id/"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2026-08-06T00:00:00+00:00</updated>
+	<updated>2026-08-07T00:00:00+00:00</updated>
 	<id>https://blog.morixhikari.my.id/atom.xml</id>
+	<entry xml:lang="en">
+		<title>[mori@LycorisRadiata ~]$ ffplay ngantuk.wav</title>
+		<published>2026-08-07T00:00:00+00:00</published>
+		<updated>2026-08-07T00:00:00+00:00</updated>
+		<link href="https://blog.morixhikari.my.id/posts/ngantuk/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/ngantuk/</id>
+		<summary>ffplay</summary>
+		
+	</entry>
 	<entry xml:lang="en">
 		<title>[mori@LycorisRadiata ~]$ touch loop.md</title>
 		<published>2026-08-06T00:00:00+00:00</published>
