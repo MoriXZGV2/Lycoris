@@ -191,6 +191,145 @@
 
 
 
+<div class="mp-window mp-d3" role="group" aria-label="media player" data-autoplay="true">
+  <div class="mp-bar">
+    <span class="mp-ico">&gt;&gt;</span>
+    <span class="mp-title">static.ogg</span>
+    <span class="mp-state">ready</span>
+    <span class="mp-grow"></span>
+    <button type="button" class="mp-btn" data-act="vol-down" aria-label="lower volume">[-]</button>
+    <button type="button" class="mp-btn" data-act="vol-up" aria-label="raise volume">[+]</button>
+    <button type="button" class="mp-btn" data-act="play" aria-label="play or pause">[&gt;]</button>
+    <button type="button" class="mp-btn" data-act="toggle" aria-label="expand or collapse">[v]</button>
+  </div>
+  <div class="mp-body" hidden>
+    <div class="mp-track"><div class="mp-fill"></div></div>
+    <div class="mp-meta">
+      <span class="mp-time">0:00 / 0:30</span>
+      <span class="mp-grow"></span>
+      <span class="mp-vol">vol 80%</span>
+    </div>
+    <audio class="mp-audio" preload="metadata" data-dur="30.0" src="https://blog.morixhikari.my.id/music/static.ogg"></audio>
+  </div>
+</div>
+<script>
+(function () {
+  'use strict';
+  var root = document.currentScript;
+  var mp = root.previousElementSibling;
+  var audio = mp.querySelector('.mp-audio');
+  var mpPlay = mp.querySelector('[data-act="play"]');
+  var mpToggle = mp.querySelector('[data-act="toggle"]');
+  var mpBody = mp.querySelector('.mp-body');
+  var mpFill = mp.querySelector('.mp-fill');
+  var mpTime = mp.querySelector('.mp-time');
+  var mpVol = mp.querySelector('.mp-vol');
+  var mpState = mp.querySelector('.mp-state');
+
+  var volume = 0.8;
+  audio.volume = volume;
+
+  function fmtTime(s) {
+    if (!isFinite(s)) { return '0:00'; }
+    var m = Math.floor(s / 60);
+    var ss = Math.floor(s % 60);
+    return m + ':' + (ss < 10 ? '0' : '') + ss;
+  }
+
+  function getDur() {
+    var d = audio.duration;
+    return isFinite(d) && d > 0 ? d : parseFloat(audio.getAttribute('data-dur'));
+  }
+
+  function updateMPState() {
+    mpPlay.textContent = audio.paused ? '[>]' : '[||]';
+    mpState.textContent = audio.paused ? 'ready' : 'playing';
+    mpVol.textContent = 'vol ' + Math.round(volume * 100) + '%';
+    var d = getDur();
+    if (d) { mpTime.textContent = fmtTime(audio.currentTime) + ' / ' + fmtTime(d); }
+  }
+
+  function setVol(v) {
+    volume = Math.max(0, Math.min(1, v));
+    audio.volume = volume;
+    updateMPState();
+  }
+
+  function togglePlay() {
+    if (audio.paused) {
+      var p = audio.play();
+      if (p && p.catch) { p.catch(function () { updateMPState(); }); }
+    } else {
+      audio.pause();
+    }
+    updateMPState();
+  }
+
+  function toggleMP() {
+    var open = mpBody.hidden;
+    mpBody.hidden = !open;
+    mpToggle.textContent = open ? '[^]' : '[v]';
+  }
+
+  audio.addEventListener('play', function () { updateMPState(); });
+  audio.addEventListener('pause', function () { updateMPState(); });
+  audio.addEventListener('ended', function () { updateMPState(); });
+  audio.addEventListener('loadedmetadata', function () { updateMPState(); });
+  audio.addEventListener('timeupdate', function () {
+    var d = getDur();
+    if (d) {
+      mpFill.style.width = (audio.currentTime / d * 100) + '%';
+      mpTime.textContent = fmtTime(audio.currentTime) + ' / ' + fmtTime(d);
+    }
+  });
+
+  var autoplayOn = mp.dataset.autoplay !== 'false';
+
+  function tryPlay() {
+    if (!audio.paused) { return; }
+    var ap = audio.play();
+    if (ap && ap.catch) { ap.catch(function () { updateMPState(); }); }
+    updateMPState();
+  }
+
+  if (autoplayOn) {
+    tryPlay();
+    function onGesture() {
+      document.removeEventListener('pointerdown', onGesture);
+      document.removeEventListener('keydown', onGesture);
+      document.removeEventListener('touchstart', onGesture);
+      document.removeEventListener('scroll', onGesture);
+      if (audio.paused) { tryPlay(); }
+    }
+    document.addEventListener('pointerdown', onGesture);
+    document.addEventListener('keydown', onGesture);
+    document.addEventListener('touchstart', onGesture);
+    document.addEventListener('scroll', onGesture);
+  }
+
+  mp.querySelector('.mp-track').addEventListener('click', function (e) {
+    var r = this.getBoundingClientRect();
+    var d = getDur();
+    if (d) { audio.currentTime = (e.clientX - r.left) / r.width * d; }
+  });
+
+  mp.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-act]');
+    if (!btn) { return; }
+    var act = btn.getAttribute('data-act');
+    if (act === 'play') { togglePlay(); }
+    else if (act === 'vol-down') { setVol(volume - 0.1); }
+    else if (act === 'vol-up') { setVol(volume + 0.1); }
+    else if (act === 'toggle') { toggleMP(); }
+  });
+})();
+</script>
+
+
+
+
+
+
 
 
 
