@@ -32,7 +32,7 @@ theme = "catppuccin-mocha"
 # Theme-specific configuration
 main_section = "posts"
 math_display = "mathjax"
-avatar = "images/pfp.jpg"
+avatar = "images/pfp.webp"
 home_recent_posts = 3
 motto_mode = "multi"
 

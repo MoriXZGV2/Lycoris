@@ -1028,11 +1028,17 @@
         border-radius: 6px;
         display: block;
         margin: 0 auto;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        background: var(--code-bg, #1e1e2e);
+        padding: 8px;
+        border: 1px solid var(--border-color, #313244);
 
         @media screen and (max-width: 500px) {
-            width: calc(100% + 10vw);
-            margin-left: -5vw;
-            border-radius: unset;
+            width: 100%;
+            margin: 0;
+            border-radius: 4px;
+            padding: 6px;
+            box-sizing: border-box;
         }
     }
 
