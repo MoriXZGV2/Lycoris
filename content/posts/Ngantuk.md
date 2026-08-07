@@ -7,7 +7,7 @@ description = "ffplay"
 tags = ["Curhatan", "Sleepy"]
 +++
 
-{% terminal(file="loop.md", track="mu.ogg", dur="2:38", durS="158.4", trackDesc="buaian buat kamu yang lagi ngantuk.") %}
+{% terminal(track="mu.ogg", dur="2:38", durS="158.4", trackDesc="buaian buat kamu yang lagi ngantuk.") %}
 --- ngantuk.md
 Intinya, aku ngantuk.
 --- sleep.md
