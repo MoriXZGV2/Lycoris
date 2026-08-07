@@ -210,6 +210,73 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="term-window" role="group" aria-label="interactive terminal">
   <div class="term-bar">Mori@LycorisRadiata: ~</div>
   <div class="term-screen"></div>
@@ -245,7 +312,7 @@ var HOST = "LycorisRadiata";
 var TRACK = "mu.ogg";
 var DUR = "2:38";
 var DURS = "158.4";
-var TRACKDESC = "a loop you want to break out of.";
+var TRACKDESC = "buaian buat kamu yang lagi ngantuk.";
 (function () {
   'use strict';
   var root = document.currentScript;
@@ -255,16 +322,16 @@ var TRACKDESC = "a loop you want to break out of.";
   var promptPath = term.querySelector('.term-prompt .tp-path');
 
   var files = {
-"~/loop.md": "",
+"~/ngantuk.md": "Intinya, aku ngantuk.","~/sleep.md": "zzzzz.","~/kepala.md": "Ngantuk, pengen tidur.","~/lagu.md": "Kalian dengerin lagu aja ya di post baru aku ini. Oh iya, aku juga lagi gak sehat, btw.","~/penutupan.md": "Selamat tidur untuk diriku.",
     '~/Blog/motto.md': 'Amor fati. Love whatever happens, including today.',
     ['~/Musik/' + TRACK]: TRACK + ' | ' + DUR + ' | ' + TRACKDESC
   };
   var protectedFiles = {
-"~/loop.md": true,
+"~/ngantuk.md": true,"~/sleep.md": true,"~/kepala.md": true,"~/lagu.md": true,"~/penutupan.md": true,
     '~/Blog/motto.md': true
   };
   var dirs = {
-    '~': ['Blog', 'Musik', "loop.md"],
+    '~': ['Blog', 'Musik', "ngantuk.md", "sleep.md", "kepala.md", "lagu.md", "penutupan.md"],
     '~/Blog': ['motto.md'],
     '~/Musik': [TRACK]
   };
@@ -486,8 +553,8 @@ var TRACKDESC = "a loop you want to break out of.";
     { out: '[ ok ] Starting blogd' },
     { out: '' },
     { cmd: 'whoami', out: 'Mori' },
-    { cmd: 'ls', out: "<span class=\"t-dir\">Blog</span>   <span class=\"t-dir\">Musik</span>   <span class=\"t-file\">loop.md</span>", html: true },
-{ cmd: 'cat loop.md', out: "" },
+    { cmd: 'ls', out: "<span class=\"t-dir\">Blog</span>   <span class=\"t-dir\">Musik</span>   <span class=\"t-file\">ngantuk.md</span>   <span class=\"t-file\">sleep.md</span>   <span class=\"t-file\">kepala.md</span>   <span class=\"t-file\">lagu.md</span>   <span class=\"t-file\">penutupan.md</span>", html: true },
+{ cmd: 'cat ngantuk.md', out: "Intinya, aku ngantuk." },{ cmd: 'cat sleep.md', out: "zzzzz." },{ cmd: 'cat kepala.md', out: "Ngantuk, pengen tidur." },{ cmd: 'cat lagu.md', out: "Kalian dengerin lagu aja ya di post baru aku ini. Oh iya, aku juga lagi gak sehat, btw." },{ cmd: 'cat penutupan.md', out: "Selamat tidur untuk diriku." },
   ];
 
   function runBoot() {
@@ -656,16 +723,6 @@ var TRACKDESC = "a loop you want to break out of.";
   runBoot();
 })();
 </script>
-<p>--- ngantuk.md
-Intinya, aku ngantuk.
---- sleep.md
-zzzzz.
---- kepala.md
-Ngantuk, pengen tidur.
---- lagu.md
-Kalian dengerin lagu aja ya di post baru aku ini. Oh iya, aku juga lagi gak sehat, btw.
---- penutupan.md
-Selamat tidur untuk diriku.</p>
 
   </main>
 </article>
