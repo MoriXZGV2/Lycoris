@@ -17,12 +17,30 @@
 		
 	</entry>
 	<entry xml:lang="en">
+		<title>Void Transmission: Base64 Only</title>
+		<published>2026-08-07T00:00:00+00:00</published>
+		<updated>2026-08-07T00:00:00+00:00</updated>
+		<link href="https://blog.morixhikari.my.id/posts/null-transmission/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/null-transmission/</id>
+		<summary>You are not authorized to view this.</summary>
+		
+	</entry>
+	<entry xml:lang="en">
 		<title>[stranger@LycorisRadiata ~]$ nano curhat.md</title>
 		<published>2026-08-07T00:00:00+00:00</published>
 		<updated>2026-08-07T00:00:00+00:00</updated>
 		<link href="https://blog.morixhikari.my.id/posts/stranger/" type="text/html"/>
 		<id>https://blog.morixhikari.my.id/posts/stranger/</id>
 		<summary>Aku nemu blog ini, terus aku nulis diam-diam. Maaf, ya.</summary>
+		
+	</entry>
+	<entry xml:lang="en">
+		<title>System Log: Unauthorized Access</title>
+		<published>2026-08-07T00:00:00+00:00</published>
+		<updated>2026-08-07T00:00:00+00:00</updated>
+		<link href="https://blog.morixhikari.my.id/posts/void-access/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/void-access/</id>
+		<summary>Anomaly detected in sector 7.</summary>
 		
 	</entry>
 	<entry xml:lang="en">
