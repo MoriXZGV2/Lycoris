@@ -16,3 +16,5 @@ KysrCnRpdGxlID0gImRHaGxJSFp2YVdRZ2MzQmxZV3R6SUdsdUlHSmhjMlUyTkE9PSIKZGF0ZSA9IDIw
 Transmission received. Base64 payload confirmed. Stego carrier: udang_stego.webp
 Extract LSB to retrieve the hidden URL.
 {% end %}
+
+![Stego Image](/images/udang_stego.webp)

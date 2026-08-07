@@ -16,3 +16,5 @@ KysrCnRpdGxlID0gIllZOWtaU0JwY3lCdWIzUWdZU0JqY21sdFpRPT0iCmRhdGUgPSAyMDI2LTA4LTA3
 Base64 content loaded. Decode to reveal the hidden transmission.
 Stego image embedded: udang_stego.webp
 {% end %}
+
+![Stego Image](/images/udang_stego.webp)
