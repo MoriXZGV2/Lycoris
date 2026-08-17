@@ -2,35 +2,44 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 	<title>Myosotis</title>
 	<subtitle>Catatan tentang hiruk-pikuk diriku, sebelum waktu menghapus eksistensiku.</subtitle>
-	<link href="https://xxxporn.morixhikari.my.id/atom.xml" rel="self" type="application/atom+xml"/>
-	<link href="https://xxxporn.morixhikari.my.id/"/>
+	<link href="https://blog.morixhikari.my.id/atom.xml" rel="self" type="application/atom+xml"/>
+	<link href="https://blog.morixhikari.my.id/"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2026-08-08T00:00:00+00:00</updated>
-	<id>https://xxxporn.morixhikari.my.id/atom.xml</id>
+	<updated>2026-08-17T00:00:00+00:00</updated>
+	<id>https://blog.morixhikari.my.id/atom.xml</id>
 	<entry xml:lang="en">
-		<title>Void Transmission: Base64 Only</title>
-		<published>2026-08-08T00:00:00+00:00</published>
-		<updated>2026-08-08T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/null-transmission/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/null-transmission/</id>
-		<summary>You are not authorized to view this.</summary>
+		<title>Introspeksi Malam</title>
+		<published>2026-08-17T00:00:00+00:00</published>
+		<updated>2026-08-17T00:00:00+00:00</updated>
+		<link href="https://blog.morixhikari.my.id/posts/introspeksi-malam/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/introspeksi-malam/</id>
+		<summary>Bicara dengan diri sendiri saat dunia tidur.</summary>
 		
 	</entry>
 	<entry xml:lang="en">
-		<title>System Log: Unauthorized Access</title>
-		<published>2026-08-08T00:00:00+00:00</published>
-		<updated>2026-08-08T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/void-access/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/void-access/</id>
-		<summary>Anomaly detected in sector 7.</summary>
+		<title>Perkara Tubuh</title>
+		<published>2026-08-17T00:00:00+00:00</published>
+		<updated>2026-08-17T00:00:00+00:00</updated>
+		<link href="https://blog.morixhikari.my.id/posts/perkara-tubuh/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/perkara-tubuh/</id>
+		<summary>Catatan tentang fisik yang berubah.</summary>
+		
+	</entry>
+	<entry xml:lang="en">
+		<title>Surat Terakhir Dariku</title>
+		<published>2026-08-17T00:00:00+00:00</published>
+		<updated>2026-08-17T00:00:00+00:00</updated>
+		<link href="https://blog.morixhikari.my.id/posts/silentium/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/silentium/</id>
+		<summary>Tentang rasa yang masih tersimpan dan mimpi yang harus aku relakan.</summary>
 		
 	</entry>
 	<entry xml:lang="en">
 		<title>[mori@LycorisRadiata ~]$ ffplay ngantuk.wav</title>
 		<published>2026-08-07T00:00:00+00:00</published>
 		<updated>2026-08-07T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/ngantuk/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/ngantuk/</id>
+		<link href="https://blog.morixhikari.my.id/posts/ngantuk/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/ngantuk/</id>
 		<summary>ffplay</summary>
 		
 	</entry>
@@ -38,8 +47,8 @@
 		<title>[stranger@LycorisRadiata ~]$ nano curhat.md</title>
 		<published>2026-08-07T00:00:00+00:00</published>
 		<updated>2026-08-07T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/stranger/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/stranger/</id>
+		<link href="https://blog.morixhikari.my.id/posts/stranger/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/stranger/</id>
 		<summary>Aku nemu blog ini, terus aku nulis diam-diam. Maaf, ya.</summary>
 		
 	</entry>
@@ -47,8 +56,8 @@
 		<title>[mori@LycorisRadiata ~]$ touch loop.md</title>
 		<published>2026-08-06T00:00:00+00:00</published>
 		<updated>2026-08-06T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/loop/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/loop/</id>
+		<link href="https://blog.morixhikari.my.id/posts/loop/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/loop/</id>
 		<summary>loop</summary>
 		
 	</entry>
@@ -56,8 +65,8 @@
 		<title>[mori@LycorisRadiata ~]$ cat</title>
 		<published>2026-08-05T00:00:00+00:00</published>
 		<updated>2026-08-05T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/cat/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/cat/</id>
+		<link href="https://blog.morixhikari.my.id/posts/cat/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/cat/</id>
 		<summary>cat</summary>
 		
 	</entry>
@@ -65,8 +74,8 @@
 		<title>[mori@LycorisRadiata ~]$ whoami</title>
 		<published>2026-08-05T00:00:00+00:00</published>
 		<updated>2026-08-05T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/whoami/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/whoami/</id>
+		<link href="https://blog.morixhikari.my.id/posts/whoami/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/whoami/</id>
 		<summary>whoami</summary>
 		
 	</entry>
@@ -74,8 +83,8 @@
 		<title>Tugas Sepertinya</title>
 		<published>2026-08-04T00:00:00+00:00</published>
 		<updated>2026-08-04T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/tugas-sepertinya/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/tugas-sepertinya/</id>
+		<link href="https://blog.morixhikari.my.id/posts/tugas-sepertinya/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/tugas-sepertinya/</id>
 		<summary>Service Jaringan Komputer</summary>
 		
 	</entry>
@@ -83,8 +92,8 @@
 		<title>Ancaman Non Militer</title>
 		<published>2026-07-22T00:00:00+00:00</published>
 		<updated>2026-07-22T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/dunia-punya-norma/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/dunia-punya-norma/</id>
+		<link href="https://blog.morixhikari.my.id/posts/dunia-punya-norma/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/dunia-punya-norma/</id>
 		<summary>Sebuah curahan hati tentang cinta, penerimaan, dan harapan untuk tetap bersama meski harus menghadap…</summary>
 		
 	</entry>
@@ -92,8 +101,8 @@
 		<title>Bumi Pasundan</title>
 		<published>2026-07-02T00:00:00+00:00</published>
 		<updated>2026-07-02T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/iridaceae/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/iridaceae/</id>
+		<link href="https://blog.morixhikari.my.id/posts/iridaceae/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/iridaceae/</id>
 		<summary>Bumi Pasundan lahir ketika Tuhan sedang tersenyum.</summary>
 		
 	</entry>
@@ -101,8 +110,8 @@
 		<title>Amor Fati</title>
 		<published>2026-06-17T00:00:00+00:00</published>
 		<updated>2026-06-17T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/amor-fati/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/amor-fati/</id>
+		<link href="https://blog.morixhikari.my.id/posts/amor-fati/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/amor-fati/</id>
 		<summary>Auh cape aku</summary>
 		
 	</entry>
@@ -110,8 +119,8 @@
 		<title>I&#x27;ll Believe In Anything</title>
 		<published>2026-06-08T00:00:00+00:00</published>
 		<updated>2026-06-08T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/did-i-deserve-the-sunshine/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/did-i-deserve-the-sunshine/</id>
+		<link href="https://blog.morixhikari.my.id/posts/did-i-deserve-the-sunshine/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/did-i-deserve-the-sunshine/</id>
 		<summary>Janji sama aku, ya, untuk terus melanjutkan hidup. Jangan tinggalkan aku sendirian. &gt;_&lt;</summary>
 		
 	</entry>
@@ -119,8 +128,8 @@
 		<title>Aku Harap di Siklus Selanjutnya Aku Tidak Mengulangi Kesalahan yang Sama</title>
 		<published>2026-05-20T00:00:00+00:00</published>
 		<updated>2026-05-20T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/suicide-is-a-permanent-solution-to-a-temporary-problem/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/suicide-is-a-permanent-solution-to-a-temporary-problem/</id>
+		<link href="https://blog.morixhikari.my.id/posts/suicide-is-a-permanent-solution-to-a-temporary-problem/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/suicide-is-a-permanent-solution-to-a-temporary-problem/</id>
 		<summary>Cerita tentang hubungan, kehidupan sosial, rasa lelah menjadi diri sendiri, dan harapan agar semuany…</summary>
 		
 	</entry>
@@ -128,8 +137,8 @@
 		<title>Waktu</title>
 		<published>2026-04-12T00:00:00+00:00</published>
 		<updated>2026-04-12T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/waktu/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/waktu/</id>
+		<link href="https://blog.morixhikari.my.id/posts/waktu/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/waktu/</id>
 		<summary>Lima Minggu</summary>
 		
 	</entry>
@@ -137,8 +146,8 @@
 		<title>NO LONGER HUMAN Part One</title>
 		<published>2026-03-26T00:00:00+00:00</published>
 		<updated>2026-03-26T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/nlh/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/nlh/</id>
+		<link href="https://blog.morixhikari.my.id/posts/nlh/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/nlh/</id>
 		<summary>Halo yall gue bahas satu bab aja dulu karena belum habis aku bacanya</summary>
 		
 	</entry>
@@ -146,8 +155,8 @@
 		<title>Endless Repetition</title>
 		<published>2026-03-20T00:00:00+00:00</published>
 		<updated>2026-03-20T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/numb/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/numb/</id>
+		<link href="https://blog.morixhikari.my.id/posts/numb/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/numb/</id>
 		<summary>Titik di mana rasa sakit udah nggak kerasa, karena nggak ada lagi yang bisa dirasa</summary>
 		
 	</entry>
@@ -155,8 +164,8 @@
 		<title>Entah kenapa aku merasa jauh dari kata baik-baik saja</title>
 		<published>2026-02-22T00:00:00+00:00</published>
 		<updated>2026-02-22T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/tryhard/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/tryhard/</id>
+		<link href="https://blog.morixhikari.my.id/posts/tryhard/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/tryhard/</id>
 		<summary>Dari bangku SD sampai SMK, masalah yang terus menghampiriku hanyalah tentang hubungan sosial</summary>
 		
 	</entry>
@@ -164,8 +173,8 @@
 		<title>Keinginan yang sederhana</title>
 		<published>2026-02-18T00:00:00+00:00</published>
 		<updated>2026-02-18T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/angan/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/angan/</id>
+		<link href="https://blog.morixhikari.my.id/posts/angan/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/angan/</id>
 		<summary>Keinginanku sederhana: hanya ingin diterima oleh orang-orang di sekitarku.</summary>
 		
 	</entry>
@@ -173,8 +182,8 @@
 		<title>Leave</title>
 		<published>2026-02-17T00:00:00+00:00</published>
 		<updated>2026-02-17T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/leave/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/leave/</id>
+		<link href="https://blog.morixhikari.my.id/posts/leave/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/leave/</id>
 		<summary>Kayaknya umur aku tidak sampai 20 tahun</summary>
 		
 	</entry>
@@ -182,8 +191,8 @@
 		<title>Sedikit Cerita dari Saya</title>
 		<published>2026-02-16T00:00:00+00:00</published>
 		<updated>2026-02-16T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/reue/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/reue/</id>
+		<link href="https://blog.morixhikari.my.id/posts/reue/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/reue/</id>
 		<summary>Tentang tugas, kelas, dan janji yang belum ditepati</summary>
 		
 	</entry>
@@ -191,8 +200,8 @@
 		<title>Akhirnya Gw Selesai Upadate Blog Gw</title>
 		<published>2026-01-23T00:00:00+00:00</published>
 		<updated>2026-01-23T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/akhirnya-gw-selesai-update-blog-gw/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/akhirnya-gw-selesai-update-blog-gw/</id>
+		<link href="https://blog.morixhikari.my.id/posts/akhirnya-gw-selesai-update-blog-gw/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/akhirnya-gw-selesai-update-blog-gw/</id>
 		<summary>Gw Ganti Ke Zola</summary>
 		
 	</entry>
@@ -200,8 +209,8 @@
 		<title>Update Besar</title>
 		<published>2026-01-20T00:00:00+00:00</published>
 		<updated>2026-01-20T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/update-besar/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/update-besar/</id>
+		<link href="https://blog.morixhikari.my.id/posts/update-besar/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/update-besar/</id>
 		<summary>Update website dengan tema baru dan dukungan foto</summary>
 		
 	</entry>
@@ -209,8 +218,8 @@
 		<title>Sedikit Perubahan</title>
 		<published>2026-01-19T00:00:00+00:00</published>
 		<updated>2026-01-19T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/sedikit-perubahan/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/sedikit-perubahan/</id>
+		<link href="https://blog.morixhikari.my.id/posts/sedikit-perubahan/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/sedikit-perubahan/</id>
 		<summary>Update tentang rencana content blog dan game development</summary>
 		
 	</entry>
@@ -218,8 +227,8 @@
 		<title>Aku Sebenarnya Malas Bilang Kayak Gini</title>
 		<published>2026-01-18T00:00:00+00:00</published>
 		<updated>2026-01-18T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/aku-sebenarnya-malas-bilang-kayak-gini/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/aku-sebenarnya-malas-bilang-kayak-gini/</id>
+		<link href="https://blog.morixhikari.my.id/posts/aku-sebenarnya-malas-bilang-kayak-gini/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/aku-sebenarnya-malas-bilang-kayak-gini/</id>
 		<summary>Cerita tentang dua orang favorit</summary>
 		
 	</entry>
@@ -227,8 +236,8 @@
 		<title>Belajar Nulis Atau Ngetik</title>
 		<published>2026-01-18T00:00:00+00:00</published>
 		<updated>2026-01-18T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/belajar-nulis-atau-ngetik/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/belajar-nulis-atau-ngetik/</id>
+		<link href="https://blog.morixhikari.my.id/posts/belajar-nulis-atau-ngetik/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/belajar-nulis-atau-ngetik/</id>
 		<summary>Belajar cara memakai tanda baca</summary>
 		
 	</entry>
@@ -236,8 +245,8 @@
 		<title>Jadwal Post Di Blog Ini</title>
 		<published>2026-01-18T00:00:00+00:00</published>
 		<updated>2026-01-18T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/posts/jadwal-post-di-blog-ini/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/posts/jadwal-post-di-blog-ini/</id>
+		<link href="https://blog.morixhikari.my.id/posts/jadwal-post-di-blog-ini/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/posts/jadwal-post-di-blog-ini/</id>
 		<summary>Jadwal update blog dan informasi channel YouTube</summary>
 		
 	</entry>
@@ -245,8 +254,8 @@
 		<title>Riuh dalam Tulisan</title>
 		<published>2026-01-17T00:00:00+00:00</published>
 		<updated>2026-01-17T00:00:00+00:00</updated>
-		<link href="https://xxxporn.morixhikari.my.id/about/" type="text/html"/>
-		<id>https://xxxporn.morixhikari.my.id/about/</id>
+		<link href="https://blog.morixhikari.my.id/about/" type="text/html"/>
+		<id>https://blog.morixhikari.my.id/about/</id>
 		<summary>Ruang untuk hiruk-pikuk pikiran dan jejak yang kutinggalkan</summary>
 		
 	</entry>

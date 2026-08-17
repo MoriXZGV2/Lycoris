@@ -6,8 +6,6 @@
 {% set durS = durS | default(value="294.5") %}
 {% set trackDesc = trackDesc | default(value="press play.") %}
 {% set show = show | default(value=0) | int %}
-{% set design = design | default(value="1") %}
-{% set dcls = 'mp-d' ~ design %}
 {% set autoplay = autoplay | default(value="true") %}
 {% if body %}
 {% set blocks = body | split(pat="--- ") %}
@@ -48,15 +46,15 @@
     <input type="text" class="term-input" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="terminal command" disabled />
   </div>
 </div>
-<div class="mp-window {{ dcls }}" role="group" aria-label="media player" data-autoplay="true">
+<div class="mp-window" role="group" aria-label="media player" data-autoplay="{{ autoplay }}">
   <div class="mp-bar">
-    <span class="mp-ico">>></span>
+    <span class="mp-ico">&gt;&gt;</span>
     <span class="mp-title">{{ track }}</span>
     <span class="mp-state">ready</span>
     <span class="mp-grow"></span>
     <button type="button" class="mp-btn" data-act="vol-down" aria-label="lower volume">[-]</button>
     <button type="button" class="mp-btn" data-act="vol-up" aria-label="raise volume">[+]</button>
-    <button type="button" class="mp-btn" data-act="play" aria-label="play or pause">[>]</button>
+    <button type="button" class="mp-btn" data-act="play" aria-label="play or pause">[&gt;]</button>
     <button type="button" class="mp-btn" data-act="toggle" aria-label="expand or collapse">[v]</button>
   </div>
   <div class="mp-body" hidden>
