@@ -8,7 +8,7 @@ description = "Auh cape aku"
 tags = ["Curhatan", "Hope"]
 +++
 
-{{ player(track="leave.ogg", dur="4:13", durS="253.3", design="1") }}
+{{ player(track="introspective.ogg", dur="2:07", durS="127.9", design="4") }}
 
 
 Berharap kepada sesuatu hal yang tidak pasti seperti kamu naik perahu bolong berdiameter 1 cm. Kedengarannya kecil sampai kau coba menaiki perahu itu, dan kamu bakal mengira dengan perahu itu kamu bakal sampai tujuan. Padahal perahu itu sendiri yang membuatmu tenggelam perlahan sampai di titik kamu sudah ada di dasar laut.

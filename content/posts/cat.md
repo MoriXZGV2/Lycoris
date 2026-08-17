@@ -7,4 +7,6 @@ description = "cat"
 tags = ["Curhatan"]
 +++
 
-{{ terminal(file="Stress.md", track="relaksasi.ogg", dur="4:54", durS="294.5", trackDesc="play this when the world gets too loud.", text="Jujur, hari ini aku capek banget. Asli, rasanya udah lah, kayak gitu terus. Obatku cuma musikku, sama menulis blog.") }}
+{{ player(track="Perkara_Tubuh.ogg", dur="2:35", durS="155.2", design="2") }}
+
+Jujur, hari ini aku capek banget. Asli, rasanya udah lah, kayak gitu terus. Obatku cuma musikku, sama menulis blog.
