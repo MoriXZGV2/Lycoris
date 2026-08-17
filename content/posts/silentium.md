@@ -7,7 +7,7 @@ description = "Tentang rasa yang masih tersimpan dan mimpi yang harus aku relaka
 tags = ["Curhatan", "Relationship", "Sleepy"]
 +++
 
-{{ player(track="introspective.ogg", dur="2:07", durS="127.9", design="6") }}
+{{ player(track="Perkara_Tubuh.ogg", dur="2:35", durS="155.2", design="6") }}
 
 Berjanji lagi lah kepadaku yah, di kehidupan kedua kita betulan menikah, gak kayak kehidupan sekarang ini. Aku mau aku jadi perempuannya, kamu jadi laki-lakinya, atau kebalikannya. Aku mau di kehidupan selanjutnya kita berbeda gender, bukan segender kayak di kehidupan saat ini. Aku mau membangun rumah tangga bersamamu, bukan hanya di dalam pikiranku saja.
 
