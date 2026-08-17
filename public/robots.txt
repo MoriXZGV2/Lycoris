@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://blog.morixhikari.my.id/sitemap.xml
+Sitemap: https://camellia.morixhikari.my.id/sitemap.xml
