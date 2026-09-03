@@ -7,7 +7,7 @@ description = "Utmattad"
 tags = ["Curhatan", "Sleepy"]
 +++
 
-{{ player(track="mu.ogg", dur="2:38", durS="158.4") }}
+{{ terminal(file="dying.md", track="mu.ogg", dur="2:38", durS="158.4", trackDesc="sine spe — without hope.", text="Berisik banget ini kepala. Apa aku harus kutembak pakai shotgun, yah, biar tenang dikit?") }}
 
 Berisik banget ini kepala. Apa aku harus kutembak pakai shotgun, yah, biar tenang dikit? Yah, aku tahu cara beli. Aku lumayan jago menggunakan internet. Aku beli di black market, bisa sepertinya.
 
