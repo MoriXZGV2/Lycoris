@@ -5,8 +5,17 @@
 	<link href="https://camellia.morixhikari.my.id/atom.xml" rel="self" type="application/atom+xml"/>
 	<link href="https://camellia.morixhikari.my.id/"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2026-09-03T00:00:00+00:00</updated>
+	<updated>2026-09-04T00:00:00+00:00</updated>
 	<id>https://camellia.morixhikari.my.id/atom.xml</id>
+	<entry xml:lang="en">
+		<title>cape</title>
+		<published>2026-09-04T00:00:00+00:00</published>
+		<updated>2026-09-04T00:00:00+00:00</updated>
+		<link href="https://camellia.morixhikari.my.id/posts/cape/" type="text/html"/>
+		<id>https://camellia.morixhikari.my.id/posts/cape/</id>
+		<summary>gak bisa</summary>
+		
+	</entry>
 	<entry xml:lang="en">
 		<title>Sine spe</title>
 		<published>2026-09-03T00:00:00+00:00</published>
