@@ -7,7 +7,7 @@ description = ";"
 tags = ["Curhatan", "Sleepy"]
 +++
 
-{{ player(track="mu.ogg", dur="2:38", durS="158.4") }}
+{{ player(track="leave.ogg", dur="4:13", durS="253.3") }}
 
 Tolong, bawa aku ke suatu tempat di mana waktu dan ruang seolah tidak pernah lagi eksis. Aku sudah sangat lelah mendengar keluh kesah tentang masalah ekonomi ini. Aku juga lelah mendengarnya, apalagi aku yang berada di lingkungan sekolah yang tidak pernah menganggap aku eksis. Rasanya juga ingin aku akhiri saja semuanya. Aku lelah. Aku tidak pernah ingin lahir di dunia yang penuh penderitaan, bukan?
 
