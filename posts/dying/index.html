@@ -210,6 +210,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="term-window" role="group" aria-label="interactive terminal">
   <div class="term-bar">Mori@LycorisRadiata: ~</div>
   <div class="term-screen"></div>
@@ -255,16 +277,16 @@ var TRACKDESC = "sine spe — without hope.";
   var promptPath = term.querySelector('.term-prompt .tp-path');
 
   var files = {
-"~/dying.md": "Berisik banget ini kepala. Apa aku harus kutembak pakai shotgun, yah, biar tenang dikit?",
+"~/Sine_spe.md": "Berisik banget ini kepala. Apa aku harus kutembak pakai shotgun, yah, biar tenang dikit? Yah, aku tahu cara beli. Aku lumayan jago menggunakan internet. Aku beli di black market, bisa sepertinya.\n\nAku capek juga. Hampir nggak ada alasan itu untuk hidup. Aku aja hidup aja dihakimin terus. Apalagi nggak hidup. Kurasa capek juga, yah, jadi manusia. Apalagi manusianya kayak aku.","~/Memento.md": "Udah capek. Besok aku harap tidak melihat matahari lagi. Aku... tapi aku harap semua orang memaafkan diri ku yang brengsek ini. Memento mori;",
     '~/Blog/motto.md': 'Amor fati. Love whatever happens, including today.',
     ['~/Musik/' + TRACK]: TRACK + ' | ' + DUR + ' | ' + TRACKDESC
   };
   var protectedFiles = {
-"~/dying.md": true,
+"~/Sine_spe.md": true,"~/Memento.md": true,
     '~/Blog/motto.md': true
   };
   var dirs = {
-    '~': ['Blog', 'Musik', "dying.md"],
+    '~': ['Blog', 'Musik', "Sine_spe.md", "Memento.md"],
     '~/Blog': ['motto.md'],
     '~/Musik': [TRACK]
   };
@@ -486,8 +508,8 @@ var TRACKDESC = "sine spe — without hope.";
     { out: '[ ok ] Starting blogd' },
     { out: '' },
     { cmd: 'whoami', out: 'Mori' },
-    { cmd: 'ls', out: "<span class=\"t-dir\">Blog</span>   <span class=\"t-dir\">Musik</span>   <span class=\"t-file\">dying.md</span>", html: true },
-{ cmd: 'cat dying.md', out: "Berisik banget ini kepala. Apa aku harus kutembak pakai shotgun, yah, biar tenang dikit?" },
+    { cmd: 'ls', out: "<span class=\"t-dir\">Blog</span>   <span class=\"t-dir\">Musik</span>   <span class=\"t-file\">Sine_spe.md</span>   <span class=\"t-file\">Memento.md</span>", html: true },
+{ cmd: 'cat Sine_spe.md', out: "Berisik banget ini kepala. Apa aku harus kutembak pakai shotgun, yah, biar tenang dikit? Yah, aku tahu cara beli. Aku lumayan jago menggunakan internet. Aku beli di black market, bisa sepertinya.\n\nAku capek juga. Hampir nggak ada alasan itu untuk hidup. Aku aja hidup aja dihakimin terus. Apalagi nggak hidup. Kurasa capek juga, yah, jadi manusia. Apalagi manusianya kayak aku." },{ cmd: 'cat Memento.md', out: "Udah capek. Besok aku harap tidak melihat matahari lagi. Aku... tapi aku harap semua orang memaafkan diri ku yang brengsek ini. Memento mori;" },
   ];
 
   function runBoot() {
@@ -656,10 +678,6 @@ var TRACKDESC = "sine spe — without hope.";
   runBoot();
 })();
 </script>
-<p>Berisik banget ini kepala. Apa aku harus kutembak pakai shotgun, yah, biar tenang dikit? Yah, aku tahu cara beli. Aku lumayan jago menggunakan internet. Aku beli di black market, bisa sepertinya.</p>
-<p>Aku capek juga. Hampir nggak ada alasan itu untuk hidup. Aku aja hidup aja dihakimin terus. Apalagi nggak hidup. Kurasa capek juga, yah, jadi manusia. Apalagi manusianya kayak aku.</p>
-<p>Udah capek. Besok aku harap tidak melihat matahari lagi. Aku... tapi aku harap semua orang memaafkan diri ku yang brengsek ini.</p>
-<p>Memento mori;</p>
 
   </main>
 </article>
