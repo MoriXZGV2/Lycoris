@@ -1,0 +1,103 @@
+{% extends "_base.html" %} {% block title %}{{ config.title }}{% endblock title
+%} {% block head %}
+<!-- Primary Meta Tags -->
+<meta name="description" content="{{ config.description }}" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="{{ config.title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ config.base_url | safe }}" />
+
+<!-- Twitter -->
+
+{% endblock head %} {% block content %}
+<div class="home-container">
+  <div class="home-intro">
+    <div class="logo-title">
+      <div class="title-inner">
+        {% if config.extra.avatar %}
+        <div class="avatar">
+          <img src="{{ get_url(path=config.extra.avatar) }}" alt="avatar">
+        </div>
+        {% endif %}
+        <div class="terminal-card">
+          <div class="terminal-bar">
+            <span class="t-title">Mori@Myosotis: ~</span>
+          </div>
+          <div class="terminal-body">
+            <p class="t-line"><span class="tp-user">Mori</span><span class="tp-at">@</span><span class="tp-host">Myosotis</span><span class="tp-path">:~$</span> <span class="t-cmd">whoami</span></p>
+            <p class="t-line t-out">Mori</p>
+            <p class="t-line"><span class="tp-user">Mori</span><span class="tp-at">@</span><span class="tp-host">Myosotis</span><span class="tp-path">:~$</span> <span class="t-cmd">cat about.txt</span></p>
+            <p class="t-line t-out">{{ config.description }}</p>
+            {# --- Motto as typed command --- #}
+            {% if config.extra.motto_mode and config.extra.motto_mode != "hide" %}
+              <p class="t-line">
+                <span class="tp-user">Mori</span><span class="tp-at">@</span><span class="tp-host">Myosotis</span><span class="tp-path">:~$</span>
+                {% if config.extra.motto_mode == "single" and config.extra.motto %}
+                <span class="motto">{{ config.extra.motto }}</span>
+                {% elif config.extra.motto_mode == "multi" and config.extra.mottos %}
+                <span class="motto" data-mottos='{{ config.extra.mottos | json_encode | safe }}'></span>
+                {% endif %}
+                <span class="terminal-cursor"></span>
+              </p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <ul class="social-links">
+        {% for link in config.extra.social_links %}
+        <li>
+          <a href="{{ link.url | safe }}" aria-label="{{ link.name | title }}">
+            <i class="{{ macros::social_icon(name=link.name) }}"></i>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <nav class="home-nav">
+
+        {% if config.extra.sections.posts | default(value=true) %}
+        <a href="{{ get_url(path="@/posts/_index.md", lang=lang) }}" {% if current_path is starting_with("/posts") %}class="active"{% endif %}>Posts</a>
+        {% endif %}
+
+        {% if config.extra.sections.about | default(value=true) %}
+        <a href="{{ get_url(path="@/about/index.md", lang=lang) }}" {% if current_path is starting_with("/about") %}class="active"{% endif %}>About</a>
+        {% endif %}
+
+        {% if config.extra.sections.archive | default(value=true) %}
+        <a href="{{ get_url(path="@/archive/index.md", lang=lang) }}" {% if current_path is starting_with("/archive") %}class="active"{% endif %}>Archives</a>
+        {% endif %}
+
+        {% if config.extra.sections.tags | default(value=true) %}
+        <a href="{{ get_url(path="@/tags/_index.md", lang=lang) }}" {% if current_path is starting_with("/tags") %}class="active"{% endif %}>Categories</a>
+        {% endif %}
+
+        {% if config.extra.sections.links | default(value=true) %}
+        <a href="{{ get_url(path="@/links/index.md", lang=lang) }}" {% if current_path is starting_with("/links") %}class="active"{% endif %}>Links</a>
+        {% endif %}
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+{% if config.extra.home_recent_posts and config.extra.home_recent_posts > 0 %}
+{% set posts_section = get_section(path="posts/_index.md") %}
+<div class="home-recent">
+  <h2 class="heading">Recent Posts</h2>
+  <ul class="recent-list">
+    {% for post in posts_section.pages | slice(start=0, end=config.extra.home_recent_posts) %}
+    <li>
+      <a href="{{ post.permalink }}" class="recent-link">
+        <span class="recent-title">{{ post.title }}</span>
+        {% if post.date %}
+        <time class="recent-date">{{ post.date | date(format="%b %d, %Y") }}</time>
+        {% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% endblock content %}
