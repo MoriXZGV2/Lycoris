@@ -5,8 +5,17 @@
 	<link href="https://delectus.morixhikari.my.id/atom.xml" rel="self" type="application/atom+xml"/>
 	<link href="https://delectus.morixhikari.my.id/"/>
 	<generator uri="https://www.getzola.org/">Zola</generator>
-	<updated>2026-10-05T00:00:00+00:00</updated>
+	<updated>2026-10-21T00:00:00+00:00</updated>
 	<id>https://delectus.morixhikari.my.id/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Agama</title>
+		<published>2026-10-21T00:00:00+00:00</published>
+		<updated>2026-10-21T00:00:00+00:00</updated>
+		<link href="https://delectus.morixhikari.my.id/posts/deisme/" type="text/html"/>
+		<id>https://delectus.morixhikari.my.id/posts/deisme/</id>
+		<summary>Soal hal yang kupercaya sepertinya</summary>
+		
+	</entry>
 	<entry xml:lang="en">
 		<title>135</title>
 		<published>2026-10-05T00:00:00+00:00</published>
